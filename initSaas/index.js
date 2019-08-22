@@ -20,12 +20,15 @@ const login = async () => {
   return data
 }
 
-const addHub = async (jwt) => {
-  let headers = {
+const genHeader = (jwt) => {
+  return {
     headers: {
       Authorization: `Bearer ${jwt}`
     }
   }
+}
+
+const addHub = async (headers) => {
   let payload = {
     "name": "Jadepool-01",
     "test_net": "true",
@@ -47,14 +50,9 @@ const addHub = async (jwt) => {
 
 }
 
-const addBlockchain = async (jwt) => {
-  let headers = {
-    headers: {
-      Authorization: `Bearer ${jwt}`
-    }
-  }
+const addBlockchain = async (headers) => {
   let payload = {
-    "name": config.asset,
+    "name": config.asset + "_",
     "type": config.asset,
     "description": "",
     "confirmation": 10
@@ -67,12 +65,7 @@ const addBlockchain = async (jwt) => {
   }
 }
 
-const getBlockchains = async (jwt) => {
-  let headers = {
-    headers: {
-      Authorization: `Bearer ${jwt}`
-    }
-  }
+const getBlockchains = async (headers) => {
   try {
     let { data } = await axios.get(`${config.superAdminHost}/api/v1/blockchains`, headers)
     return data
@@ -81,14 +74,9 @@ const getBlockchains = async (jwt) => {
   }
 }
 
-const addAsset = async (jwt, id) => {
-  let headers = {
-    headers: {
-      Authorization: `Bearer ${jwt}`
-    }
-  }
+const addAsset = async (headers, id) => {
   let payload = {
-    "name": config.asset.toLowerCase(),
+    "name": config.asset,
     "description": "",
     "blockchainID": id,
     "decimal": 10,
@@ -111,6 +99,36 @@ const addAsset = async (jwt, id) => {
   }
 }
 
+const addCompany = async (headers, companyName) => {
+  let payload = {
+    "name": companyName,
+    "description": "",
+    "address": "",
+    "contact": "",
+    "email": config.companyEmail
+  }
+  let { data } = await axios.post(`${config.saasHost}/api/v1/company/apply`, payload, headers)
+  return data
+}
+
+const getAllCompay = async (headers) => {
+  try {
+    let { data } = await axios.get(`${config.superAdminHost}/api/v1/companies`, headers)
+    return data
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+const passCompany = async (headers, id) => {
+  try {
+    let { data } = await axios.put(`${config.superAdminHost}/api/v1/company/${id}/pass`, {}, headers)
+    return data
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 const sleepSeconds = (s) => {
   return new Promise((resolve) => setTimeout(resolve, s * 1000))
 }
@@ -127,7 +145,9 @@ const initSaas = async () => {
   assert(status.data.token, 'super admin login failed')
   let jwt = status.data.token
 
-  let addHubStatus = await addHub(jwt)
+  let headers = genHeader(jwt)
+
+  let addHubStatus = await addHub(headers)
   if (addHubStatus.code === 20002) {
     console.warn('hub alreay exist')
   } else {
@@ -136,19 +156,46 @@ const initSaas = async () => {
 
   await sleepSeconds(3)
 
-  let addBlockchainStatus = await addBlockchain(jwt)
+  let addBlockchainStatus = await addBlockchain(headers)
   await sleepSeconds(3)
-  assert(addBlockchainStatus.code == 0, 'add blockchain failed')
+  if (addBlockchainStatus.code == 20002) {
+    console.warn('blockchain already exist')
+  } else {
+    assert(addBlockchainStatus.code == 0, 'add blockchain failed')
+  }
 
-  let blockchains = await getBlockchains(jwt)
+  let blockchains = await getBlockchains(headers)
   assert(blockchains.data.length > 0)
 
   await sleepSeconds(3)
 
-  let { ID } = _.find(blockchains.data, {name: config.asset})
-  let addAssetStatus = await addAsset(jwt, ID)
-  assert(addAssetStatus.code == 0, 'add asset failed')
-  console.log('init saas success')
+  let { ID } = _.find(blockchains.data, { type: config.asset })
+  let addAssetStatus = await addAsset(headers, ID)
+  if (addAssetStatus.code === 20002 || addAssetStatus.code === 10003) {
+    console.warn(`asset ${config.asset} already exist`)
+  } else {
+    assert(addAssetStatus.code == 0, 'add asset failed')
+  }
+
+  let companyName = new Date().getTime().toString()
+  let addCompanyStatus = await addCompany(headers, companyName)
+  if (addCompanyStatus.code === 20002) {
+    console.warn(`email ${config.companyEmail} has been registered, exit init saas...`)
+    process.exit(1)
+  } else {
+    assert(addCompanyStatus.code == 0, 'add company failed')
+  }
+
+  await sleepSeconds(3)
+  let getCompanyStatus = await getAllCompay(headers)
+  assert(getCompanyStatus.code == 0, 'get all company failed')
+  let { companies } = getCompanyStatus.data
+  let toApplyCompany = _.find(companies, { name: companyName })
+  let companyId = toApplyCompany.id
+  let passCompanyStatus = await passCompany(headers, companyId)
+  assert(passCompanyStatus.code == 0, 'pass company failed')
+
+  console.log('init saas finished...')
 }
 
 initSaas()
