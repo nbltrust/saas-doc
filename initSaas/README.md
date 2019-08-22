@@ -28,5 +28,5 @@ const config = {
 
 3. 开始初始化
 ```bash
-node init.js
+node index.js
 ```
