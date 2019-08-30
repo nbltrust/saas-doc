@@ -64,8 +64,8 @@ tar -xzvf jadepool-saas-backend-V1.4.0-ubuntu.tar.gz
 
 2. 修改postgres, redis数据库连接方式
 
-vim ./saas-backend/config/pro.yaml
-```yml
+vim ./jadepool-saas-backend/config/pro.yaml
+```
 database:
 	host: localhost
 	port: 5432
@@ -82,8 +82,8 @@ redis:
 
 3. 修改邮件服务器配置
 
-vim ./saas-backend/config/pro.yaml
-```yml
+vim ./jadepool-saas-backend/config/pro.yaml
+```
 email: 
 	host: smtp.gmail.com
 	port: 587
@@ -94,16 +94,16 @@ email:
 
 4. 修改连接hub时所需要的appid和pri_key, 其中pri_key为saas这一侧的ecc私钥，需要在hub admin中配置同名的appid和相应的ecc公钥
 
-vim ./saas-backend/config/pro.yaml
-```yml
+vim ./jadepool-saas-backend/config/pro.yaml
+```
 jpsrv:
 	jadepool_appid: "saas"
 	pri_key: "xxxxxx"
 ```
 
 5. 修改saasadmin weburl和role service url
-vim ./saas-backend/config/pro.yaml
-```yml
+vim ./jadepool-saas-backend/config/pro.yaml
+```
 saasadmin:
 	saas_web_url: "http://127.0.0.1:3000"           # 指向saas前端对应的url
   access_control_enable: true                     # 是否激活角色权限(V1.4.0后必须开启)                 
@@ -113,8 +113,8 @@ saasadmin:
 6. 其他配置可参考使用config/template.yaml默认配置
 7. 启动saas backend, 新建pm2配置文件
 
-vim ./saas-backend/pm2/saas-prod.yaml
-```yml
+vim ./jadepool-saas-backend/pm2/saas-prod.yaml
+```
 apps:
   - cwd: ./
     name: saas-jp
