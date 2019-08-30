@@ -87,9 +87,9 @@ const addAsset = async (headers, id) => {
     "depositSwitch": true,
     "highLevel": "100",
     "lowLevel": "0",
-    "logoURL": "string",
+    "logoURL": "",
     "addressWithMemo": false,
-    "explorerURL": "string"
+    "explorerURL": ""
   }
   try {
     let { data } = await axios.post(`${config.superAdminHost}/api/v1/asset`, payload, headers)
