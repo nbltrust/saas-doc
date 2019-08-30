@@ -3,7 +3,7 @@
 |版本|修订日期 |修订人 |
 |--|--|--|
 | V1.2.0 | 2019-08-07 | Sarcy |
-| | | |
+| V1.4.0 | 2019-09-30 | Sarcy |
 #### 环境准备及依赖组件安装
 首先jadepool saas服务依赖jadepool hub, 在部署saas之前请确保hub部署完成。关于hub部署步骤可以在[这里](https://github.com/nbltrust/jadepool-doc/blob/master/Chinese/%E7%91%B6%E6%B1%A0%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md)查看。
 
@@ -11,8 +11,10 @@
 
  - saas后端，包括api, jp, admin, superadmin, order server五个不同的服务
  - saas前端，主要连接saas后端admin服务
+ - saas admin前端, 主要连接saas后端superadmin服务
  - postgres数据库, v11.2+
  - redis数据库, v5.0.3+
+ - 角色权限服务
  - seed服务(可选)，可用于存储以下内容：
 	 - 与hub通信时所需要的ecc公私钥对(saas私钥，hub公钥)
 	 - 访问api server时所需要的app key/secret
@@ -55,14 +57,9 @@ sudo systemctl enable redis-server.service
 
 #### 部署saas后端服务
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
-
 ```bash
 cd $WORKSPACE
-mkdir saas-backend
-tar -xzvf saas-backend-V1.2.0-ubuntu-full.tar.gz -C ./saas-backend
-
-mkdir saas-frontend
-tar -xzvf saas-frontend-V1.2.0-ubuntu-full.tar.gz -C ./saas-frontend
+tar -xzvf jadepool-saas-backend-V1.4.0-ubuntu.tar.gz
 ```
 
 2. 修改postgres, redis数据库连接方式
@@ -82,7 +79,8 @@ redis:
 	pass: ""
 	db: 0
 ```
-4. 修改邮件服务器配置
+
+3. 修改邮件服务器配置
 
 vim ./saas-backend/config/pro.yaml
 ```yml
@@ -93,7 +91,8 @@ email:
 	pass: xxxxxx
 	tls: true
 ```
-5. 修改连接hub时所需要的appid和pri_key, 其中pri_key为saas这一侧的ecc私钥，需要在hub admin中配置同名的appid和相应的ecc公钥
+
+4. 修改连接hub时所需要的appid和pri_key, 其中pri_key为saas这一侧的ecc私钥，需要在hub admin中配置同名的appid和相应的ecc公钥
 
 vim ./saas-backend/config/pro.yaml
 ```yml
@@ -101,8 +100,18 @@ jpsrv:
 	jadepool_appid: "saas"
 	pri_key: "xxxxxx"
 ```
+
+5. 修改saasadmin weburl和role service url
+vim ./saas-backend/config/pro.yaml
+```yml
+saasadmin:
+	saas_web_url: "http://127.0.0.1:3000"           # 指向saas前端对应的url
+  access_control_enable: true                     # 是否激活角色权限(V1.4.0后必须开启)                 
+  service_role_url: "http://127.0.0.1:6666"       # 角色权限服务url
+```
+
 6. 其他配置可参考使用config/template.yaml默认配置
-7. 新建pm2配置文件
+7. 启动saas backend, 新建pm2配置文件
 
 vim ./saas-backend/pm2/saas-prod.yaml
 ```yml
@@ -156,13 +165,28 @@ apps:
 ```bash
 pm2 start ./pm2/saas-prod.yaml
 ```
+
+#### 部署role service
+
+1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
+```bash
+cd $WORKSPACE
+tar -xzvf jadepool-service-role-V0.1.0-ubuntu.tar.gz
+```
+
+2. 启动jadepool-service-role
+注意此服务依赖于hub master， 所以需要在hub master启动之后再启动role service
+```bash
+cd jadepool-service-role
+pm2 start pm2/prod.yml 
+```
+
 #### 部署saas前端代码
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
 
 ```bash
 cd $WORKSPACE
-mkdir saas-frontend
-tar -xzvf saas-frontend-V1.2.0-ubuntu-full.tar.gz -C ./saas-frontend
+tar -xzvf jadepool-saas-frontend-V1.4.0-ubuntu.tar.gz
 ```
 2. 安装nginx
 ```bash
@@ -171,3 +195,16 @@ sudo apt install -y nginx
 ```
 3. 使用nginx反向代理指向saas前端静态文件
 
+#### 部署saas前端代码
+1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
+
+```bash
+cd $WORKSPACE
+tar -xzvf jadepool-saas-admin-V0.1.0-ubuntu.tar.gz
+```
+2. 安装nginx
+```bash
+sudo apt update
+sudo apt install -y nginx
+```
+3. 使用nginx反向代理指向saas admin前端静态文件
