@@ -195,7 +195,7 @@ sudo apt install -y nginx
 ```
 3. 使用nginx反向代理指向saas前端静态文件
 
-#### 部署saas前端代码
+#### 部署saas admin前端代码
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
 
 ```bash
