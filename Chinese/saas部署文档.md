@@ -54,6 +54,28 @@ sudo systemctl enable redis-server.service
 ```
 请自行设置数据库用户名密码，和配置主从。
 
+#### 部署role service
+
+1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
+```bash
+cd $WORKSPACE
+tar -xzvf jadepool-service-role-V0.1.0-ubuntu.tar.gz
+```
+
+2. 启动jadepool-service-role
+注意此服务依赖于hub master， 所以需要在hub master启动之后再启动role service
+```bash
+cd jadepool-service-role
+pm2 start pm2/prod.yml 
+```
+
+3. 运行role service初始化脚本
+注意此服务只需要做一次，后续只有当权限改变才需要更新。
+```
+cd initSaasRole
+npm i
+node upsert.js
+```
 
 #### 部署saas后端服务
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
@@ -107,7 +129,7 @@ vim ./jadepool-saas-backend/config/pro.yaml
 saasadmin:
 	saas_web_url: "http://127.0.0.1:3000"           # 指向saas前端对应的url
   access_control_enable: true                     # 是否激活角色权限(V1.4.0后必须开启)                 
-  service_role_url: "http://127.0.0.1:6666"       # 角色权限服务url
+  service_role_url: "http://127.0.0.1:6666"       # 配置上一步启动role service时角色权限服务对应url
 ```
 
 6. 其他配置可参考使用config/template.yaml默认配置
@@ -164,21 +186,6 @@ apps:
 8. 启动saas后端服务
 ```bash
 pm2 start ./pm2/saas-prod.yaml
-```
-
-#### 部署role service
-
-1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
-```bash
-cd $WORKSPACE
-tar -xzvf jadepool-service-role-V0.1.0-ubuntu.tar.gz
-```
-
-2. 启动jadepool-service-role
-注意此服务依赖于hub master， 所以需要在hub master启动之后再启动role service
-```bash
-cd jadepool-service-role
-pm2 start pm2/prod.yml 
 ```
 
 #### 部署saas前端代码
