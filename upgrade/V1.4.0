@@ -1,0 +1,66 @@
+## saas-v1.4.0升级文档
+### 说明
+- 本次saas升级须配合hub V0.13.1+版本
+- 增加了服务发现，需安装consul
+- saas新增role service
+
+### 升级实践
+#### 硬件状况
+- 1台hub master（2核4G）
+- 2台hub agent（2核4G）
+- 1台saas backend（2核4G）
+- 1台seed （1核1G）
+
+#### 部署步骤
+1. 停止saas服务
+2. 停止hub服务
+3. 备份saas postgres数据库
+4. 备份hub mongo数据库
+5. 在hub 1台master和2台agent下载安装consul
+6. 在hub 1台master和2台agent上新增/etc/consul.d文件夹
+7. 在hub 1台master和2台agent启动consul
+8. 更新hub包
+9. 更新mongo索引
+10. 通过pm2启动hub
+11. 在consul:8500 UI界面查看启动状况
+12. 在hub master上安装role service
+13. pm2 start role-service
+14. 在consul:8500 UI界面查看rest-role-http service是否工作正常
+15. 在hub master上运行node upsert.js脚本
+```bash
+git clone https://github.com/nbltrust/saas-doc.git
+cd ./saas-doc/initSaasRole
+npm i
+node upsert.js
+``` 
+16. 更新saas backend bin文件夹下可执行文件
+17. 更新saas backend config文件夹下yml文件下saasadmin:
+```bash
+saasadmin:
+  saas_web_url: "http://127.0.0.1:3000"           # 指向saas前端对应的url
+  access_control_enable: true                     # 是否激活角色权限(V1.4.0后必须开启)                 
+  service_role_url: "http://${hub_master}:6666"   # 配置上一步启动role service时角色权限服务对应url
+```
+18. 启动saas backend
+```
+cd saas-backend
+pm2 start pm2/pro.yml
+```
+19. nginx重新配置，指向最新的saas frontend打包文件
+20. nginx重新配置，指向最新的saas admin frontend打包文件
+
+#### 注意点
+1. 部署saas之前需要保证hub已经正常启动
+2. 云端部署可能会因为部分端口未开导致通信失败
+	- saas所在机器需要访问hub master 6666， 7001端口
+3. nginx域名配置问题，以下为我们内部域名配置，可做参考
+	- saas有两个前端服务，三个后台服务，最好都配置域名
+
+|ip| 端口 |服务 | 域名|
+|--|--|--|--|
+|  |  |saas前端|https://saas.xxxx.io|
+|  | 8094 |saas admin svr|https://saas-bg.xxxx.io|
+|  | 8092 |saas api svr|https://saas-api.xxxx.io|
+|  |  |saas admin前端|https://saas-admin.xxxx.io|
+|  | 8093 |saas admin后端|https://saas-superadmin.xxxx.io|
+4. 部署完成后可以访问saas前端和saas admin前端验证是否工作正常
