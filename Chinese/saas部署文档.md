@@ -63,7 +63,8 @@ tar -xzvf jadepool-service-role-V0.1.0-ubuntu.tar.gz
 ```
 
 2. 启动jadepool-service-role
-注意此服务依赖于hub master， 所以需要在hub master启动之后再启动role service
+注意此服务依赖于hub master， 所以需要在hub master启动之后再启动role service.
+此服务建议和hub master部署在同一台服务器上，并保证consul已经正常部署。
 ```bash
 cd jadepool-service-role
 pm2 start pm2/prod.yml 
@@ -127,7 +128,7 @@ jpsrv:
 vim ./jadepool-saas-backend/config/pro.yaml
 ```
 saasadmin:
-	saas_web_url: "http://127.0.0.1:3000"           # 指向saas前端对应的url
+  saas_web_url: "http://127.0.0.1:3000"           # 指向saas前端对应的url
   access_control_enable: true                     # 是否激活角色权限(V1.4.0后必须开启)                 
   service_role_url: "http://127.0.0.1:6666"       # 配置上一步启动role service时角色权限服务对应url
 ```
