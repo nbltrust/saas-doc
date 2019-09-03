@@ -1,0 +1,386 @@
+service:
+  name: jadepool-saas
+  version: '0.1.0'
+# 权限规则定义配置
+
+
+
+permissionRules:
+  - 
+    key: home.balances
+    desc: home balances
+  - 
+    key: home.history_balances
+    desc: home history balances
+  - 
+    key: wallet.create_wallet
+    desc: create wallet
+  - 
+    key: wallet.add_coins
+    desc: add coins
+  - 
+    key: wallet.delete_coins
+    desc: delete coins
+  - 
+    key: wallet.address_list
+    desc: address list
+  - 
+    key: wallet.order_approve
+    desc: order approve
+  - 
+    key: wallet.exception_approve
+    desc: exception approve
+  - 
+    key: wallet.update_wallet_info
+    desc: update wallet info
+  - 
+    key: wallet.change_wallet_password
+    desc: change wallet password
+  - 
+    key: wallet.reset_wallet_password
+    desc: reset wallet password
+  - 
+    key: wallet.freeze_wallet
+    desc: freeze wallet
+  - 
+    key: wallet.manage_api_key
+    desc: manage api key
+  - 
+    key: wallet.manage_api_feature_switcher
+    desc: manage api feature switcher
+  - 
+    key: wallet.set_outgoing_approval
+    desc: set outgoing approval
+  - 
+    key: wallet.set_spending_limits
+    desc: set spending limits
+  - 
+    key: wallet.set_ip_whitelist
+    desc: set ip whitelist
+  - 
+    key: wallet.set_address_whitelist
+    desc: set address whitelist
+  - 
+    key: wallet.set_address_blacklist
+    desc: set address blacklist
+  -
+    key: wallet.manage_staking_setting
+    desc: manage staking setting  
+  - 
+    key: wallet.send
+    desc: send
+  - 
+    key: wallet.receive
+    desc: receive
+  - 
+    key: wallet.delegate
+    desc: delegate
+  - 
+    key: wallet.undelegate
+    desc: undelegate
+  - 
+    key: wallet.staking
+    desc: staking
+  - 
+    key: transaction
+    desc: transaction
+  - 
+    key: company.update_company_info
+    desc: company update company info
+  - 
+    key: company.manage_api_key
+    desc: company manage api key
+  - 
+    key: company.manage_role
+    desc: company manage role
+  - 
+    key: company.manage_user
+    desc: company manage user
+  - 
+    key: funding.funding
+    desc: funding funding
+  - 
+    key: funding.history
+    desc: funding history
+
+
+
+# 权限组定义
+
+
+
+permissionGroups:
+  - 
+    key: ADMIN.home
+    desc: Home
+    rules:
+      - 
+        key: home.balances
+        value: 0x02
+      - 
+        key: home.history_balances
+        value: 0x02
+  - 
+    key: ADMIN.wallet
+    desc: Wallet
+    rules:
+      - 
+        key: wallet.create_wallet
+        value: 0x17
+      - 
+        key: wallet.add_coins
+        value: 0x17
+      - 
+        key: wallet.delete_coins
+        value: 0x18
+      - 
+        key: wallet.address_list
+        value: 0x16
+      - 
+        key: wallet.order_approve
+        value: 0x17
+      - 
+        key: wallet.exception_approve
+        value: 0x17
+      - 
+        key: wallet.update_wallet_info
+        value: 0x04
+      - 
+        key: wallet.change_wallet_password
+        value: 0x16
+      - 
+        key: wallet.reset_wallet_password
+        value: 0x16
+      - 
+        key: wallet.freeze_wallet
+        value: 0x16
+      - 
+        key: wallet.manage_api_key
+        value: 0x16
+      - 
+        key: wallet.manage_api_feature_switcher
+        value: 0x16
+      - 
+        key: wallet.set_outgoing_approval
+        value: 0x16
+      - 
+        key: wallet.set_spending_limits
+        value: 0x16
+      - 
+        key: wallet.set_ip_whitelist
+        value: 0x16
+      - 
+        key: wallet.set_address_whitelist
+        value: 0x16
+      - 
+        key: wallet.set_address_blacklist
+        value: 0x16
+      -
+        key: wallet.manage_staking_setting
+        value: 0x16
+      - 
+        key: wallet.send
+        value: 0x16
+      - 
+        key: wallet.receive
+        value: 0x16
+      - 
+        key: wallet.delegate
+        value: 0x16
+      - 
+        key: wallet.undelegate
+        value: 0x16
+      - 
+        key: wallet.staking
+        value: 0x02
+  - 
+    key: APPROVER.wallet
+    desc: Wallet
+    rules:
+      - 
+        key: wallet.address_list
+        value: 0x16
+      - 
+        key: wallet.order_approve
+        value: 0x17
+      - 
+        key: wallet.exception_approve
+        value: 0x17
+      - 
+        key: wallet.send
+        value: 0x16
+      - 
+        key: wallet.receive
+        value: 0x16
+      - 
+        key: wallet.delegate
+        value: 0x16
+      - 
+        key: wallet.undelegate
+        value: 0x16
+      - 
+        key: wallet.staking
+        value: 0x02
+  - 
+    key: OPERATOR.wallet
+    desc: Wallet
+    rules:
+      - 
+        key: wallet.address_list
+        value: 0x16
+      - 
+        key: wallet.send
+        value: 0x16
+      - 
+        key: wallet.receive
+        value: 0x16
+      - 
+        key: wallet.delegate
+        value: 0x16
+      - 
+        key: wallet.undelegate
+        value: 0x16
+      - 
+        key: wallet.staking
+        value: 0x02
+  - 
+    key: OBSERVER.wallet
+    desc: Wallet
+    rules:
+      - 
+        key: wallet.address_list
+        value: 0x16
+      - 
+        key: wallet.staking
+        value: 0x02
+  - 
+    key: SUPER_ADMIN.wallet
+    desc: Wallet
+    rules:
+      - 
+        key: wallet.staking
+        value: 0x02
+  - 
+    key: ADMIN.transaction
+    desc: Transaction
+    rules:
+      - 
+        key: transaction
+        value: 0x02
+  - 
+    key: ADMIN.company
+    desc: Company
+    rules:
+      - 
+        key: company.update_company_info
+        value: 0x05
+      - 
+        key: company.manage_api_key
+        value: 0x16
+      - 
+        key: company.manage_role
+        value: 0x16
+      - 
+        key: company.manage_user
+        value: 0x16
+  - 
+    key: ADMIN.funding
+    desc: Funding
+    rules:
+      - 
+        key: funding.funding
+        value: 0x16
+      - 
+        key: funding.history
+        value: 0x02
+
+
+
+# 角色定义
+
+
+
+roles:
+  - 
+    key: ADMIN
+    desc: Administrator
+    meta:
+      name: Admin
+    template: ~
+    groups:
+      - 
+        key: ADMIN.home
+      -
+        key: ADMIN.wallet
+      -
+        key: ADMIN.transaction
+      -
+        key: ADMIN.company
+      -
+        key: ADMIN.funding
+    rules: ~
+      
+  - 
+    key: APPROVER
+    desc: approver
+    meta:
+      name: Approver
+    template: ~
+    groups:
+      - 
+        key: ADMIN.home
+      - 
+        key: APPROVER.wallet
+      - 
+        key: ADMIN.transaction
+    rules: ~
+
+
+  - 
+    key: OPERATOR
+    desc: operator
+    meta:
+      name: Operator
+    template: ~
+    groups:
+      - 
+        key: ADMIN.home
+      - 
+        key: OPERATOR.wallet
+      - 
+        key: ADMIN.transaction
+    rules: ~
+
+
+  - 
+    key: OBSERVER
+    desc: observer
+    meta:
+      name: Observer
+    template: ~
+    groups:
+      - 
+        key: ADMIN.home
+      - 
+        key: OBSERVER.wallet
+      - 
+        key: ADMIN.transaction
+    rules: ~
+  
+  - 
+    key: SUPER_ADMIN
+    desc: system manager
+    meta:
+      name: System manager
+    template: ~
+    groups:
+      - 
+        key: ADMIN.home
+      -
+        key: SUPER_ADMIN.wallet
+      -
+        key: ADMIN.transaction
+      -
+        key: ADMIN.company
+      -
+        key: ADMIN.funding

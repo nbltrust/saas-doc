@@ -70,7 +70,7 @@ pm2 start pm2/prod.yml
 ```
 
 3. 运行role service初始化脚本
-注意此服务只需要做一次，后续只有当权限改变才需要更新。
+注意此服务只需要做一次，后续只有当权限改变才需要更新
 ```
 cd initSaasRole
 npm i

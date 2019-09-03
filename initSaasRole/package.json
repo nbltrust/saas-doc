@@ -1,0 +1,16 @@
+{
+  "name": "initSaasRole",
+  "version": "1.0.0",
+  "description": "",
+  "main": "upsert.js",
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
