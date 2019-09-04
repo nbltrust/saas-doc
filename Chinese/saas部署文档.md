@@ -129,8 +129,9 @@ vim ./jadepool-saas-backend/config/pro.yaml
 ```
 saasadmin:
   saas_web_url: "http://127.0.0.1:3000"           # 指向saas前端对应的url
-  access_control_enable: true                     # 是否激活角色权限(V1.4.0后必须开启)                 
+  access_control_enable: true                     # 是否激活角色权限(V1.4.0后必须开启)
   service_role_url: "http://127.0.0.1:6666"       # 配置上一步启动role service时角色权限服务对应url
+  service_name: "jadepool-saas"                   # 请求role service时使用的service name
 ```
 
 6. 其他配置可参考使用config/template.yaml默认配置
