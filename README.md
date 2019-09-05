@@ -1,9 +1,6 @@
 Welcome to Jadepool SAAS!
 
 ### 文档list
-- 需求文档:
-> https://shimo.im/docs/r16q8MwN4XdH6k7D/read
-
 - 接口文档:
 > http://39.98.58.238:5000
 
