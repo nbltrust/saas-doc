@@ -8,7 +8,12 @@ Welcome to Jadepool SAAS!
 > https://github.com/nbltrust/jadepool-saas-sdk-nodejs
 
 - 试用站点:
+saas
 > https://saas.jadepool.io
+hub
+> https://hub.jadepool.io/
+api
+> https://api.jadepool.io/ + path
 
 - 试用文档:
 > https://github.com/nbltrust/jadepool-doc/blob/master/Chinese/Trail_Doc_For_SAAS.md
