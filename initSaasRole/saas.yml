@@ -25,6 +25,9 @@ permissionRules:
     key: wallet.address_list
     desc: address list
   - 
+    key: wallet.resend_notification
+    desc: resend notification
+  - 
     key: wallet.order_approve
     desc: order approve
   - 
@@ -136,6 +139,9 @@ permissionGroups:
       - 
         key: wallet.address_list
         value: 0x16
+      -
+        key: wallet.resend_notification
+        value: 0x16
       - 
         key: wallet.order_approve
         value: 0x17
@@ -200,6 +206,9 @@ permissionGroups:
       - 
         key: wallet.address_list
         value: 0x16
+      -
+        key: wallet.resend_notification
+        value: 0x16
       - 
         key: wallet.order_approve
         value: 0x17
@@ -228,6 +237,9 @@ permissionGroups:
       - 
         key: wallet.address_list
         value: 0x16
+      -
+        key: wallet.resend_notification
+        value: 0x16
       - 
         key: wallet.send
         value: 0x16
@@ -249,6 +261,9 @@ permissionGroups:
     rules:
       - 
         key: wallet.address_list
+        value: 0x16
+      -
+        key: wallet.resend_notification
         value: 0x16
       - 
         key: wallet.staking
