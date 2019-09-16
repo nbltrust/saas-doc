@@ -195,7 +195,7 @@ pm2 start ./pm2/saas-prod.yaml
 
 ```bash
 cd $WORKSPACE
-tar -xzvf jadepool-saas-frontend-V1.4.0-ubuntu.tar.gz
+tar -xzvf jadepool-saas-frontend-V1.5.3-math-ubuntu.tar.gz
 ```
 2. 安装nginx
 ```bash
@@ -209,7 +209,7 @@ sudo apt install -y nginx
 
 ```bash
 cd $WORKSPACE
-tar -xzvf jadepool-saas-admin-V0.1.0-ubuntu.tar.gz
+tar -xzvf jadepool-saas-admin-V1.5.3-math-ubuntu.tar.gz
 ```
 2. 安装nginx
 ```bash
