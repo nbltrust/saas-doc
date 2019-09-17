@@ -1,6 +1,6 @@
 service:
   name: jadepool-saas
-  version: '0.1.0'
+  version: '0.2.2'
 # 权限规则定义配置
 
 
@@ -8,10 +8,16 @@ service:
 permissionRules:
   - 
     key: home.balances
-    desc: home balances
+    desc: balances
+    meta:
+      desc:
+        en:
+          balances
+        zh-cn:
+          余额
   - 
     key: home.history_balances
-    desc: home history balances
+    desc: history balances
   - 
     key: wallet.create_wallet
     desc: create wallet
@@ -89,22 +95,22 @@ permissionRules:
     desc: transaction
   - 
     key: company.update_company_info
-    desc: company update company info
+    desc: update company info
   - 
     key: company.manage_api_key
-    desc: company manage api key
+    desc: manage api key
   - 
     key: company.manage_role
-    desc: company manage role
+    desc: manage role
   - 
     key: company.manage_user
-    desc: company manage user
+    desc: manage user
   - 
     key: funding.funding
-    desc: funding funding
+    desc: funding
   - 
     key: funding.history
-    desc: funding history
+    desc: history
 
 
 
@@ -116,6 +122,12 @@ permissionGroups:
   - 
     key: ADMIN.home
     desc: Home
+    meta:
+      desc:
+        en:
+          Home
+        zh-cn:
+          首页
     rules:
       - 
         key: home.balances
@@ -320,7 +332,16 @@ roles:
     key: ADMIN
     desc: Administrator
     meta:
-      name: Admin
+      name:
+        en:
+          Admin
+        zh-cn:
+          管理员
+      desc:
+        en:
+          Administrator
+        zh-cn:
+          Administrator
     template: ~
     groups:
       - 
@@ -339,7 +360,11 @@ roles:
     key: APPROVER
     desc: approver
     meta:
-      name: Approver
+      name:
+        en:
+          Approver
+        zh-cn:
+          Approver
     template: ~
     groups:
       - 
@@ -355,7 +380,11 @@ roles:
     key: OPERATOR
     desc: operator
     meta:
-      name: Operator
+      name:
+        en:
+          Operator
+        zh-cn:
+          Operator
     template: ~
     groups:
       - 
@@ -371,7 +400,11 @@ roles:
     key: OBSERVER
     desc: observer
     meta:
-      name: Observer
+      name:
+        en:
+          Observer
+        zh-cn:
+          Observer
     template: ~
     groups:
       - 
@@ -386,7 +419,11 @@ roles:
     key: SUPER_ADMIN
     desc: system manager
     meta:
-      name: System manager
+      name:
+        en:
+          System manager
+        zh-cn:
+          System manager
     template: ~
     groups:
       - 
