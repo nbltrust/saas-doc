@@ -579,9 +579,9 @@ roles:
           管理员
       desc:
         en:
-          Administrator
+          Administrator, own all of the authorities in the system
         zh-cn:
-          管理员
+          管理员，拥有系统中所有权限
     template: ~
     groups:
       - 
@@ -607,9 +607,9 @@ roles:
           审批员
       desc:
         en:
-          approver
+          Approver, own the authorities include business approval and exception handling
         zh-cn:
-          审批员
+          审批人，拥有业务审批和异常处理相关的权限
     template: ~
     groups:
       - 
@@ -632,9 +632,9 @@ roles:
           操作员
       desc:
         en:
-          operator
+          Operator, business sponsor, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate
         zh-cn:
-          操作员
+          操作员，业务发起人，拥有发起业务的权限，比如提现/抵押/解抵押
     template: ~
     groups:
       - 
@@ -657,9 +657,9 @@ roles:
           观察员
       desc:
         en:
-          observer
+          Observer, only own the authorities to look up the business and information
         zh-cn:
-          观察员
+          观察员，只能查看系统中的数据，没有操作权限
     template: ~
     groups:
       - 
@@ -672,18 +672,18 @@ roles:
   
   - 
     key: SUPER_ADMIN
-    desc: system manager
+    desc: Creator
     meta:
       name:
         en:
-          System manager
+          Creator
         zh-cn:
-          系统管理员
+          创建者
       desc:
         en:
-          System manager
+          Creator, who create the company, own the authorities manage users and roles
         zh-cn:
-          系统管理员
+          创建者，机构的创建者，拥有管理用户及角色的权限
     template: ~
     groups:
       - 
