@@ -1,6 +1,6 @@
 service:
   name: jadepool-saas
-  version: '0.2.2'
+  version: '1.6.0'
 # 权限规则定义配置
 
 
@@ -12,105 +12,297 @@ permissionRules:
     meta:
       desc:
         en:
-          balances
+          assets proportion
         zh-cn:
-          余额
+          资产占比图
   - 
     key: home.history_balances
-    desc: history balances
+    desc: trend chart
+    meta:
+      desc:
+        en:
+          trend chart
+        zh-cn:
+          趋势图
   - 
     key: wallet.create_wallet
     desc: create wallet
+    meta:
+      desc:
+        en:
+          create wallet
+        zh-cn:
+          创建钱包
   - 
     key: wallet.add_coins
     desc: add coins
+    meta:
+      desc:
+        en:
+          add coins
+        zh-cn:
+          增加币种
   - 
     key: wallet.delete_coins
     desc: delete coins
+    meta:
+      desc:
+        en:
+          delete coins
+        zh-cn:
+          删除币种
   - 
     key: wallet.address_list
     desc: address list
+    meta:
+      desc:
+        en:
+          address list
+        zh-cn:
+          地址列表
   - 
     key: wallet.resend_notification
     desc: resend notification
+    meta:
+      desc:
+        en:
+          resend notification
+        zh-cn:
+          重发通知
   - 
     key: wallet.order_approve
     desc: order approve
+    meta:
+      desc:
+        en:
+          order approve
+        zh-cn:
+          业务审批
   - 
     key: wallet.exception_approve
     desc: exception approve
+    meta:
+      desc:
+        en:
+          exception approve
+        zh-cn:
+          异常处理
   - 
     key: wallet.update_wallet_info
     desc: update wallet info
+    meta:
+      desc:
+        en:
+          update wallet info
+        zh-cn:
+          更新钱包信息
   - 
     key: wallet.change_wallet_password
     desc: change wallet password
+    meta:
+      desc:
+        en:
+          change wallet password
+        zh-cn:
+          修改钱包密码
   - 
     key: wallet.reset_wallet_password
     desc: reset wallet password
+    meta:
+      desc:
+        en:
+          reset wallet password
+        zh-cn:
+          重置钱包密码
   - 
     key: wallet.freeze_wallet
     desc: freeze wallet
+    meta:
+      desc:
+        en:
+          freeze wallet
+        zh-cn:
+          冻结钱包
   - 
     key: wallet.manage_api_key
     desc: manage api key
+    meta:
+      desc:
+        en:
+          manage api key
+        zh-cn:
+          管理API KEY
   - 
     key: wallet.manage_api_feature_switcher
     desc: manage api feature switcher
+    meta:
+      desc:
+        en:
+          manage api feature switcher
+        zh-cn:
+          管理API功能开关
   - 
     key: wallet.set_outgoing_approval
     desc: set outgoing approval
+    meta:
+      desc:
+        en:
+          set outgoing approval
+        zh-cn:
+          设置出账审批
   - 
     key: wallet.set_spending_limits
     desc: set spending limits
+    meta:
+      desc:
+        en:
+          set spending limits
+        zh-cn:
+          设置限额
   - 
     key: wallet.set_ip_whitelist
     desc: set ip whitelist
+    meta:
+      desc:
+        en:
+          set ip whitelist
+        zh-cn:
+          设置IP白名单
   - 
     key: wallet.set_address_whitelist
     desc: set address whitelist
+    meta:
+      desc:
+        en:
+          set address whitelist
+        zh-cn:
+          设置地址白名单
   - 
     key: wallet.set_address_blacklist
     desc: set address blacklist
+    meta:
+      desc:
+        en:
+          set address blacklist
+        zh-cn:
+          设置地址黑名单
   -
     key: wallet.manage_staking_setting
     desc: manage staking setting  
+    meta:
+      desc:
+        en:
+          manage staking setting
+        zh-cn:
+          管理抵押设置
   - 
     key: wallet.send
     desc: send
+    meta:
+      desc:
+        en:
+          send
+        zh-cn:
+          转账
   - 
     key: wallet.receive
     desc: receive
+    meta:
+      desc:
+        en:
+          receive
+        zh-cn:
+          收款
   - 
     key: wallet.delegate
     desc: delegate
+    meta:
+      desc:
+        en:
+          delegate
+        zh-cn:
+          抵押
   - 
     key: wallet.undelegate
     desc: undelegate
+    meta:
+      desc:
+        en:
+          undelegate
+        zh-cn:
+          解抵押
   - 
     key: wallet.staking
     desc: staking
+    meta:
+      desc:
+        en:
+          staking
+        zh-cn:
+          抵押
   - 
     key: transaction
     desc: transaction
+    meta:
+      desc:
+        en:
+          transaction
+        zh-cn:
+          交易
   - 
     key: company.update_company_info
     desc: update company info
+    meta:
+      desc:
+        en:
+          update company info
+        zh-cn:
+          更新公司信息
   - 
     key: company.manage_api_key
     desc: manage api key
+    meta:
+      desc:
+        en:
+          manage api key
+        zh-cn:
+          管理API KEY
   - 
     key: company.manage_role
     desc: manage role
+    meta:
+      desc:
+        en:
+          manage role
+        zh-cn:
+          角色管理
   - 
     key: company.manage_user
     desc: manage user
+    meta:
+      desc:
+        en:
+          manage user
+        zh-cn:
+          用户管理
   - 
     key: funding.funding
     desc: funding
+    meta:
+      desc:
+        en:
+          funding
+        zh-cn:
+          配资
   - 
     key: funding.history
     desc: history
+    meta:
+      desc:
+        en:
+          history
+        zh-cn:
+          历史记录
 
 
 
@@ -138,6 +330,12 @@ permissionGroups:
   - 
     key: ADMIN.wallet
     desc: Wallet
+    meta:
+      desc:
+        en:
+          Wallet
+        zh-cn:
+          钱包
     rules:
       - 
         key: wallet.create_wallet
@@ -214,6 +412,12 @@ permissionGroups:
   - 
     key: APPROVER.wallet
     desc: Wallet
+    meta:
+      desc:
+        en:
+          Wallet
+        zh-cn:
+          钱包
     rules:
       - 
         key: wallet.address_list
@@ -245,6 +449,12 @@ permissionGroups:
   - 
     key: OPERATOR.wallet
     desc: Wallet
+    meta:
+      desc:
+        en:
+          Wallet
+        zh-cn:
+          钱包
     rules:
       - 
         key: wallet.address_list
@@ -270,6 +480,12 @@ permissionGroups:
   - 
     key: OBSERVER.wallet
     desc: Wallet
+    meta:
+      desc:
+        en:
+          Wallet
+        zh-cn:
+          钱包
     rules:
       - 
         key: wallet.address_list
@@ -283,6 +499,12 @@ permissionGroups:
   - 
     key: SUPER_ADMIN.wallet
     desc: Wallet
+    meta:
+      desc:
+        en:
+          Wallet
+        zh-cn:
+          钱包
     rules:
       - 
         key: wallet.staking
@@ -290,6 +512,12 @@ permissionGroups:
   - 
     key: ADMIN.transaction
     desc: Transaction
+    meta:
+      desc:
+        en:
+          Transaction
+        zh-cn:
+          交易
     rules:
       - 
         key: transaction
@@ -297,6 +525,12 @@ permissionGroups:
   - 
     key: ADMIN.company
     desc: Company
+    meta:
+      desc:
+        en:
+          Company
+        zh-cn:
+          公司
     rules:
       - 
         key: company.update_company_info
@@ -313,6 +547,12 @@ permissionGroups:
   - 
     key: ADMIN.funding
     desc: Funding
+    meta:
+      desc:
+        en:
+          Funding
+        zh-cn:
+          配资
     rules:
       - 
         key: funding.funding
@@ -341,7 +581,7 @@ roles:
         en:
           Administrator
         zh-cn:
-          Administrator
+          管理员
     template: ~
     groups:
       - 
@@ -362,9 +602,14 @@ roles:
     meta:
       name:
         en:
-          Approver
+          approver
         zh-cn:
-          Approver
+          审批员
+      desc:
+        en:
+          approver
+        zh-cn:
+          审批员
     template: ~
     groups:
       - 
@@ -382,9 +627,14 @@ roles:
     meta:
       name:
         en:
-          Operator
+          operator
         zh-cn:
-          Operator
+          操作员
+      desc:
+        en:
+          operator
+        zh-cn:
+          操作员
     template: ~
     groups:
       - 
@@ -402,9 +652,14 @@ roles:
     meta:
       name:
         en:
-          Observer
+          observer
         zh-cn:
-          Observer
+          观察员
+      desc:
+        en:
+          observer
+        zh-cn:
+          观察员
     template: ~
     groups:
       - 
@@ -423,7 +678,12 @@ roles:
         en:
           System manager
         zh-cn:
+          系统管理员
+      desc:
+        en:
           System manager
+        zh-cn:
+          系统管理员
     template: ~
     groups:
       - 
