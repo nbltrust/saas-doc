@@ -10,7 +10,7 @@ JadePool SAAS，是拓链（上海）科技有限公司瑶池托管生态的重�
 > https://hub.jadepool.io
 
 > [saas api]
-> https://api.jadepool.io/
+> https://openapi.jadepool.io/
 
 
 ### 文档list
