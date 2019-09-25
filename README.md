@@ -29,7 +29,4 @@ JadePool SAAS，是拓链（上海）科技有限公司瑶池托管生态的重�
 
 ### 问题及支持
 
-任何问题请联系我们, contact@jadepool.io
-
-也可以加群，在群里反馈，试用愉快。
-![contact us](https://ws4.sinaimg.cn/large/006tNc79gy1g40nfp311ij30iq0ibdgy.jpg)
+任何问题请联系我们, contact@jadepool.io, 试用愉快。
