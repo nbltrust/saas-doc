@@ -602,7 +602,7 @@ roles:
     meta:
       name:
         en:
-          approver
+          Approver
         zh-cn:
           审批员
       desc:
@@ -627,7 +627,7 @@ roles:
     meta:
       name:
         en:
-          operator
+          Operator
         zh-cn:
           操作员
       desc:
@@ -652,7 +652,7 @@ roles:
     meta:
       name:
         en:
-          observer
+          Observer
         zh-cn:
           观察员
       desc:
