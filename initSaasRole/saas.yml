@@ -598,7 +598,7 @@ roles:
       
   - 
     key: APPROVER
-    desc: approver
+    desc: Approver
     meta:
       name:
         en:
@@ -623,7 +623,7 @@ roles:
 
   - 
     key: OPERATOR
-    desc: operator
+    desc: Operator
     meta:
       name:
         en:
@@ -648,7 +648,7 @@ roles:
 
   - 
     key: OBSERVER
-    desc: observer
+    desc: Observer
     meta:
       name:
         en:
