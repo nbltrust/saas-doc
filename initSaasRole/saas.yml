@@ -632,7 +632,7 @@ roles:
           操作员
       desc:
         en:
-          Operator, business sponsor, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate
+          Operator, bussiness sponsor, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate
         zh-cn:
           操作员，业务发起人，拥有发起业务的权限，比如提现/抵押/解抵押
     template: ~
