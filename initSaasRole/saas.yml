@@ -52,6 +52,15 @@ permissionRules:
         zh-cn:
           删除币种
   - 
+    key: wallet.switch_coins
+    desc: switch coins
+    meta:
+      desc:
+        en:
+          switch coins
+        zh-cn:
+          开关币种
+  - 
     key: wallet.address_list
     desc: address list
     meta:
@@ -346,6 +355,9 @@ permissionGroups:
       - 
         key: wallet.delete_coins
         value: 0x18
+      - 
+        key: wallet.switch_coins
+        value: 0x17
       - 
         key: wallet.address_list
         value: 0x16
