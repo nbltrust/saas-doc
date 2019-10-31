@@ -73,8 +73,12 @@ pm2 start pm2/prod.yml
 3. 运行role service初始化脚本
 注意此服务只需要做一次，后续只有当权限改变才需要更新
 ```
+git clone https://github.com/nbltrust/saas-doc.git
+cd saas-doc
+git checkout role-desc-i18n
 cd initSaasRole
 npm i
+vi upsert.js # 修改21行server IP地址，改向步骤2 jadepool-service-role启动机器IP
 node upsert.js
 ```
 
@@ -85,8 +89,8 @@ cd $WORKSPACE
 tar -xzvf jadepool-saas-backend-V1.4.0-ubuntu.tar.gz
 ```
 
-2. 修改postgres, redis数据库连接方式
-
+2. 修改配置文件，选项参考config/template.yaml
+  - 修改postgres, redis数据库连接方式
 vim ./jadepool-saas-backend/config/pro.yaml
 ```
 database:
@@ -103,7 +107,7 @@ redis:
 	db: 0
 ```
 
-3. 修改邮件服务器配置
+ - 修改邮件服务器配置
 
 vim ./jadepool-saas-backend/config/pro.yaml
 ```
@@ -115,7 +119,7 @@ email:
 	tls: true
 ```
 
-4. 修改连接hub时所需要的appid和pri_key, 其中pri_key为saas这一侧的ecc私钥，需要在hub admin中配置同名的appid和相应的ecc公钥
+ - 修改连接hub时所需要的appid和pri_key, 其中pri_key为saas这一侧的ecc私钥，需要在hub admin中配置同名的appid和相应的ecc公钥
 
 vim ./jadepool-saas-backend/config/pro.yaml
 ```
@@ -124,7 +128,7 @@ jpsrv:
 	pri_key: "xxxxxx"
 ```
 
-5. 修改saasadmin weburl和role service url
+ - 修改saasadmin weburl和role service url
 vim ./jadepool-saas-backend/config/pro.yaml
 ```
 saasadmin:
@@ -134,8 +138,7 @@ saasadmin:
   service_name: "jadepool-saas"                   # 请求role service时使用的service name
 ```
 
-6. 其他配置可参考使用config/template.yaml默认配置
-7. 启动saas backend, 新建pm2配置文件
+3. 启动saas backend, 新建pm2配置文件。注意JP_SECRET需修改为与hub、jadepool-service-role一致。
 
 vim ./jadepool-saas-backend/pm2/saas-prod.yaml
 ```
@@ -148,6 +151,7 @@ apps:
     out_file : ./log/saas-jp-out.log
     env:
       env: "pro"
+      JP_SECRET: xxx
 
   - cwd: ./
     name: saas-order
@@ -157,6 +161,7 @@ apps:
     out_file : ./log/saas-order-out.log
     env:
       env: "pro"
+      JP_SECRET: xxx
 
   - cwd: ./
     name: saas-admin
@@ -166,6 +171,7 @@ apps:
     out_file : ./log/saas-admin-out.log
     env:
       env: "pro"
+      JP_SECRET: xxx
 
   - cwd: ./
     name: saas-api
@@ -175,6 +181,7 @@ apps:
     out_file : ./log/saas-api-out.log
     env:
       env: "pro"
+      JP_SECRET: xxx
 
   - cwd: ./
     name: saas-superadmin
@@ -184,8 +191,9 @@ apps:
     out_file : ./log/saas-superadmin-out.log
     env:
       env: "pro"
+      JP_SECRET: xxx
 ```
-8. 启动saas后端服务
+4. 启动saas后端服务
 ```bash
 pm2 start ./pm2/saas-prod.yaml
 ```
@@ -202,7 +210,34 @@ tar -xzvf jadepool-saas-frontend-V1.5.3-math-ubuntu.tar.gz
 sudo apt update
 sudo apt install -y nginx
 ```
-3. 使用nginx反向代理指向saas前端静态文件
+3. 使用nginx反向代理指向saas前端静态文件, nginx配置参考
+```bash
+server {
+  listen 3003;
+  server_name default;
+  index 200.html index.html;
+  # 此处填写jadepool-saas-frontend路径
+  root /opt/jadepool/saas/V1.7.1/jadepool-saas-frontend;
+  location / {
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Methods "POST, HEAD, PUT, PATCH, GET, DELETE";
+    add_header Access-Control-Allow-Headers "cache-control, content-type, Origin, Authorization, Accept";
+    add_header Access-Control-Allow-Credentials true;
+    # First attempt to serve request as file, then
+    # as directory, then fall back to displaying a 404.
+    try_files $uri $uri/ =404;
+    error_page 404 =301 /;
+  }
+  location ~ ^/NginxStatus/ {
+    stub_status on;
+    access_log off;
+    }
+  location ~ .*\.(html)?$
+  {
+    expires 0m;
+  }
+}
+```
 
 #### 部署saas admin前端代码
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
@@ -216,4 +251,31 @@ tar -xzvf jadepool-saas-admin-V1.5.3-math-ubuntu.tar.gz
 sudo apt update
 sudo apt install -y nginx
 ```
-3. 使用nginx反向代理指向saas admin前端静态文件
+3. 使用nginx反向代理指向saas admin前端静态文件, nginx配置参考
+```bash
+server {
+  listen 3009;
+  server_name default;
+  index 200.html index.html;
+  # 此处填写jadepool-saas-admin或者jadepool-saas-frontend路径
+  root /opt/jadepool/saas/V1.7.1/jadepool-saas-admin;
+  location / {
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Methods "POST, HEAD, PUT, PATCH, GET, DELETE";
+    add_header Access-Control-Allow-Headers "cache-control, content-type, Origin, Authorization, Accept";
+    add_header Access-Control-Allow-Credentials true;
+    # First attempt to serve request as file, then
+    # as directory, then fall back to displaying a 404.
+    try_files $uri $uri/ =404;
+    error_page 404 =301 /;
+  }
+  location ~ ^/NginxStatus/ {
+    stub_status on;
+    access_log off;
+    }
+  location ~ .*\.(html)?$
+  {
+    expires 0m;
+  }
+}
+```
