@@ -312,6 +312,15 @@ permissionRules:
           history
         zh-cn:
           历史记录
+  - 
+    key: activity
+    desc: activity
+    meta:
+      desc:
+        en:
+          activity
+        zh-cn:
+          活动
 
 
 
@@ -572,7 +581,19 @@ permissionGroups:
       - 
         key: funding.history
         value: 0x02
-
+-
+    key: ADMIN.activity
+    desc: Activity
+    meta:
+      desc:
+        en:
+          Activity
+        zh-cn:
+          活动
+    rules:
+      - 
+        key: activity
+        value: 0x02
 
 
 # 角色定义
@@ -606,6 +627,8 @@ roles:
         key: ADMIN.company
       -
         key: ADMIN.funding
+      -
+        key: ADMIN.activity
     rules: ~
       
   - 
@@ -630,6 +653,8 @@ roles:
         key: APPROVER.wallet
       - 
         key: ADMIN.transaction
+      -
+        key: ADMIN.activity
     rules: ~
 
 
@@ -655,6 +680,8 @@ roles:
         key: OPERATOR.wallet
       - 
         key: ADMIN.transaction
+      -
+        key: ADMIN.activity
     rules: ~
 
 
@@ -680,6 +707,8 @@ roles:
         key: OBSERVER.wallet
       - 
         key: ADMIN.transaction
+      -
+        key: ADMIN.activity
     rules: ~
   
   - 
@@ -708,3 +737,5 @@ roles:
         key: ADMIN.company
       -
         key: ADMIN.funding
+      -
+        key: ADMIN.activity
