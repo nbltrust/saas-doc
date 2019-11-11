@@ -581,7 +581,7 @@ permissionGroups:
       - 
         key: funding.history
         value: 0x02
--
+  -
     key: ADMIN.activity
     desc: Activity
     meta:
