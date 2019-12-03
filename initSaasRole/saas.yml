@@ -160,6 +160,15 @@ permissionRules:
         zh-cn:
           设置出账审批
   - 
+    key: wallet.set_approval
+    desc: set approval
+    meta:
+      desc:
+        en:
+          set approval
+        zh-cn:
+          设置审批
+  - 
     key: wallet.set_spending_limits
     desc: set spending limits
     meta:
@@ -399,6 +408,9 @@ permissionGroups:
         value: 0x16
       - 
         key: wallet.set_outgoing_approval
+        value: 0x16
+      - 
+        key: wallet.set_approval
         value: 0x16
       - 
         key: wallet.set_spending_limits
