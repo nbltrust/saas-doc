@@ -1,0 +1,195 @@
+service:
+  name: jadepool-saas-admin
+  version: '1.9.0'
+# 权限规则定义配置
+
+
+
+permissionRules:
+  - 
+    key: companies
+    desc: companies
+    meta:
+      desc:
+        en:
+          companies
+        zh-cn:
+          公司
+
+
+
+# 权限组定义
+
+
+
+permissionGroups:
+  - 
+    key: ADMIN
+    desc: Admin
+    meta:
+      desc:
+        en:
+          Admin
+        zh-cn:
+          管理员
+    rules:
+      - 
+        key: companies
+        value: 0x1F
+  - 
+    key: APPROVER
+    desc: Approver
+    meta:
+      desc:
+        en:
+          Approver
+        zh-cn:
+          审批员(运营)
+    rules:
+      - 
+        key: companies
+        value: 0x16
+  - 
+    key: OPERATOR
+    desc: Operator
+    meta:
+      desc:
+        en:
+          Operator
+        zh-cn:
+          运维
+    rules: ~
+
+  - 
+    key: OBSERVER
+    desc: Observer
+    meta:
+      desc:
+        en:
+          Observer
+        zh-cn:
+          观察员
+    rules:
+      - 
+        key: companies
+        value: 0x02
+  - 
+    key: SUPER_ADMIN
+    desc: SuperAdmin
+    meta:
+      desc:
+        en:
+          Super Admin
+        zh-cn:
+          超级管理员
+    rules:
+      - 
+        key: companies
+        value: 0x16
+
+
+# 角色定义
+
+
+
+roles:
+  - 
+    key: ADMIN
+    desc: Admin
+    meta:
+      name:
+        en:
+          Admin
+        zh-cn:
+          管理员
+      desc:
+        en:
+          Administrator, own all of the authorities in the system
+        zh-cn:
+          管理员，拥有系统中所有权限
+    template: ~
+    groups:
+      - 
+        key: ADMIN
+    rules: ~
+      
+  - 
+    key: APPROVER
+    desc: Approver
+    meta:
+      name:
+        en:
+          Approver
+        zh-cn:
+          审批员(运营)
+      desc:
+        en:
+          Approver, own the authorities include business approval and exception handling
+        zh-cn:
+          审批人，拥有业务审批和异常处理相关的权限
+    template: ~
+    groups:
+      - 
+        key: APPROVER
+    rules: ~
+
+
+  - 
+    key: OPERATOR
+    desc: Operator
+    meta:
+      name:
+        en:
+          Operator
+        zh-cn:
+          运维
+      desc:
+        en:
+          Operator, bussiness sponsor, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate
+        zh-cn:
+          运维，拥有运维配置相关的权限
+    template: ~
+    groups:
+      - 
+        key: OPERATOR
+    rules: ~
+
+
+  - 
+    key: OBSERVER
+    desc: Observer
+    meta:
+      name:
+        en:
+          Observer
+        zh-cn:
+          观察员
+      desc:
+        en:
+          Observer, only own the authorities to look up the business and information
+        zh-cn:
+          观察员，只能查看系统中的数据，没有操作权限
+    template: ~
+    groups:
+      - 
+        key: OBSERVER
+    rules: ~
+  
+  - 
+    key: SUPER_ADMIN
+    desc: Super Admin
+    meta:
+      name:
+        en:
+          Super Admin
+        zh-cn:
+          超级管理员
+      desc:
+        en:
+          Super Admin, who create the company, own the authorities manage users and roles
+        zh-cn:
+          超级管理员，权限最高，只能是初始化时的账号为超管，拥有系统中所有权限
+    template: ~
+    groups:
+      -
+        key: SUPER_ADMIN
