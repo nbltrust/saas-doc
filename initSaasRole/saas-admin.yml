@@ -243,7 +243,7 @@ permissionGroups:
     rules:
       - 
         key: companies
-        value: 0x16
+        value: 0x1F
       - 
         key: accounts
         value: 0x1F
