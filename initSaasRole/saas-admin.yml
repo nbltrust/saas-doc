@@ -15,6 +15,96 @@ permissionRules:
           companies
         zh-cn:
           公司
+  - 
+    key: accounts
+    desc: accounts
+    meta:
+      desc:
+        en:
+          accounts
+        zh-cn:
+          账号
+  - 
+    key: wallets
+    desc: wallets
+    meta:
+      desc:
+        en:
+          wallets
+        zh-cn:
+          钱包
+  - 
+    key: order
+    desc: order
+    meta:
+      desc:
+        en:
+          order
+        zh-cn:
+          订单
+  - 
+    key: address
+    desc: address
+    meta:
+      desc:
+        en:
+          address
+        zh-cn:
+          地址
+  - 
+    key: balance
+    desc: balance
+    meta:
+      desc:
+        en:
+          balance
+        zh-cn:
+          余额
+  - 
+    key: jadepool
+    desc: jadepool
+    meta:
+      desc:
+        en:
+          jadepool
+        zh-cn:
+          jadepool
+  - 
+    key: blockchains
+    desc: blockchains
+    meta:
+      desc:
+        en:
+          blockchains
+        zh-cn:
+          区块链
+  - 
+    key: assets
+    desc: assets
+    meta:
+      desc:
+        en:
+          assets
+        zh-cn:
+          资产
+  - 
+    key: package
+    desc: package
+    meta:
+      desc:
+        en:
+          package
+        zh-cn:
+          套餐
+  - 
+    key: advance
+    desc: advance
+    meta:
+      desc:
+        en:
+          advance
+        zh-cn:
+          高级
 
 
 
@@ -36,6 +126,36 @@ permissionGroups:
       - 
         key: companies
         value: 0x1F
+      - 
+        key: accounts
+        value: 0x1F
+      - 
+        key: wallets
+        value: 0x1F
+      - 
+        key: order
+        value: 0x1F
+      - 
+        key: address
+        value: 0x1F
+      - 
+        key: balance
+        value: 0x1F
+      - 
+        key: jadepool
+        value: 0x1F
+      - 
+        key: blockchains
+        value: 0x1F
+      - 
+        key: assets
+        value: 0x1F
+      - 
+        key: package
+        value: 0x1F
+      - 
+        key: advance
+        value: 0x1F
   - 
     key: APPROVER
     desc: Approver
@@ -49,6 +169,12 @@ permissionGroups:
       - 
         key: companies
         value: 0x16
+      - 
+        key: package
+        value: 0x1F
+      - 
+        key: advance
+        value: 0x1F
   - 
     key: OPERATOR
     desc: Operator
@@ -58,8 +184,13 @@ permissionGroups:
           Operator
         zh-cn:
           运维
-    rules: ~
-
+    rules:
+      - 
+        key: jadepool
+        value: 0x1F
+      - 
+        key: advance
+        value: 0x1F
   - 
     key: OBSERVER
     desc: Observer
@@ -72,6 +203,33 @@ permissionGroups:
     rules:
       - 
         key: companies
+        value: 0x02
+      - 
+        key: accounts
+        value: 0x02
+      - 
+        key: wallets
+        value: 0x02
+      - 
+        key: order
+        value: 0x02
+      - 
+        key: balance
+        value: 0x02
+      - 
+        key: jadepool
+        value: 0x02
+      - 
+        key: blockchains
+        value: 0x02
+      - 
+        key: assets
+        value: 0x02
+      - 
+        key: package
+        value: 0x02
+      - 
+        key: advance
         value: 0x02
   - 
     key: SUPER_ADMIN
@@ -86,6 +244,36 @@ permissionGroups:
       - 
         key: companies
         value: 0x16
+      - 
+        key: accounts
+        value: 0x1F
+      - 
+        key: wallets
+        value: 0x1F
+      - 
+        key: order
+        value: 0x1F
+      - 
+        key: address
+        value: 0x1F
+      - 
+        key: balance
+        value: 0x1F
+      - 
+        key: jadepool
+        value: 0x1F
+      - 
+        key: blockchains
+        value: 0x1F
+      - 
+        key: assets
+        value: 0x1F
+      - 
+        key: package
+        value: 0x1F
+      - 
+        key: advance
+        value: 0x1F
 
 
 # 角色定义
