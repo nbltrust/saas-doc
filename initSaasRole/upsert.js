@@ -13,9 +13,19 @@ function loadYaml (fileName) {
       console.log(e)
     }
     return doc
-  }
+}
 
-let cfg = loadYaml('saas')
+let cfg
+let myArgs = process.argv.slice(2)
+if (myArgs.length > 0) {
+  cfg = loadYaml(myArgs[0])
+} else {
+  cfg = loadYaml('saas')
+}
+if (!cfg) {
+  console.log("load config failed")
+  return
+}
 console.log(cfg, {depth: null})
 
 request.post('http://127.0.0.1:6666/api/v1/sudo/batch-update', {
