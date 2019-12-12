@@ -304,6 +304,15 @@ permissionRules:
         zh-cn:
           用户管理
   - 
+    key: company.manage_auth
+    desc: manage auth method
+    meta:
+      desc:
+        en:
+          manage authentication method
+        zh-cn:
+          认证方式管理
+  - 
     key: funding.funding
     desc: funding
     meta:
@@ -577,6 +586,9 @@ permissionGroups:
       - 
         key: company.manage_user
         value: 0x16
+      -
+        key: company.manage_auth
+        value: 0x1F
   - 
     key: ADMIN.funding
     desc: Funding
