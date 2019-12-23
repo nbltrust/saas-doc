@@ -456,7 +456,7 @@ permissionGroups:
         value: 0x16
       - 
         key: wallet.set_approval
-        value: 0x16
+        value: 0x1F
       - 
         key: wallet.set_spending_limits
         value: 0x16
