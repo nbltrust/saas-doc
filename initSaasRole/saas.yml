@@ -34,6 +34,33 @@ permissionRules:
         zh-cn:
           创建钱包
   - 
+    key: wallet.delete_wallet
+    desc: delete wallet
+    meta:
+      desc:
+        en:
+          delete wallet
+        zh-cn:
+          删除钱包
+  - 
+    key: wallet.create_address
+    desc: create address
+    meta:
+      desc:
+        en:
+          create address
+        zh-cn:
+          增加地址
+  - 
+    key: wallet.delete_address
+    desc: delete address
+    meta:
+      desc:
+        en:
+          delete address
+        zh-cn:
+          删除地址
+  - 
     key: wallet.add_coins
     desc: add coins
     meta:
@@ -377,6 +404,15 @@ permissionGroups:
         key: wallet.create_wallet
         value: 0x17
       - 
+        key: wallet.delete_wallet
+        value: 0x1F
+      - 
+        key: wallet.create_address
+        value: 0x1F
+      - 
+        key: wallet.delete_address
+        value: 0x1F
+      - 
         key: wallet.add_coins
         value: 0x17
       - 
@@ -420,7 +456,7 @@ permissionGroups:
         value: 0x16
       - 
         key: wallet.set_approval
-        value: 0x16
+        value: 0x1F
       - 
         key: wallet.set_spending_limits
         value: 0x16
