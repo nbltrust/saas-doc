@@ -115,6 +115,15 @@ permissionRules:
         zh-cn:
           业务审批
   - 
+    key: wallet.order_note
+    desc: note order
+    meta:
+      desc:
+        en:
+          note order
+        zh-cn:
+          备注订单
+  - 
     key: wallet.exception_approve
     desc: exception approve
     meta:
@@ -430,6 +439,9 @@ permissionGroups:
       - 
         key: wallet.order_approve
         value: 0x17
+      -
+        key: wallet.order_note
+        value: 0x1F
       - 
         key: wallet.exception_approve
         value: 0x17
@@ -506,6 +518,9 @@ permissionGroups:
       - 
         key: wallet.order_approve
         value: 0x17
+      -
+        key: wallet.order_note
+        value: 0x1F
       - 
         key: wallet.exception_approve
         value: 0x17
@@ -555,6 +570,9 @@ permissionGroups:
       - 
         key: wallet.staking
         value: 0x02
+      -
+        key: wallet.order_note
+        value: 0x1F
   - 
     key: OBSERVER.wallet
     desc: Wallet
