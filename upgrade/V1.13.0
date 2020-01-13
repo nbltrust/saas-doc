@@ -1,0 +1,43 @@
+## saas-V1.13.0升级文档
+### 调整说明
+- saas-admin更新部署步骤（详见第七步）
+### 部署步骤
+#### 一、拉取saas最新包
+##### saas后端
+- ssh root@121.196.217.176:/home/ops/general/saas/V1.13.0/jadepool-saas-backend-V1.13.0-ubuntu.tar.gz .
+##### saas前端
+- ssh root@121.196.217.176:/home/ops/general/saas/V1.13.0/jadepool-saas-frontend-V1.13.0-bbb-ubuntu.tar.gz .
+##### saas admin
+- ssh root@121.196.217.176:/home/ops/general/saas/V1.13.0/jadepool-saas-admin-V1.13.0-ubuntu.tar.gz .
+#### 二、停用saas服务
+#### 三、更新权限列表
+```bash
+git clone https://github.com/nbltrust/saas-doc.git
+cd ./saas-doc
+git pull
+cd ./initSaasRole
+node upsert.js
+```
+#### 四、替换后端包
+#### 五、替换前端包
+#### 六、替换admin包
+#### 七、saas-admin部署步骤更新
+1. 解压jadepool-saas-admin-V1.13.0-ubuntu.tar.gz
+```bash
+tar -xzvf jadepool-saas-admin-V1.13.0-ubuntu.tar.gz
+```
+2. 修改请求的后端服务url
+
+假设saas-superadmin服务对应的url为https://saas-superadmin.custody.net
+```bash
+cd jadepool-saas-admin
+
+vim index.html
+# 修改href
+<meta id="backend_host" href=""/>改为
+<meta id="backend_host" href="https://saas-superadmin.custody.net"/>
+```
+
+3. 使用nginx代理saas-admin静态文件， 具体步骤可以参考[saas部署文档](https://github.com/nbltrust/saas-doc/blob/master/Chinese/saas%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md)最后一步
+#### 七、重启saas服务
+
