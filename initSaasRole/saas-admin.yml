@@ -175,6 +175,9 @@ permissionGroups:
       - 
         key: advance
         value: 0x1F
+      - 
+        key: assets
+        value: 0x02
   - 
     key: OPERATOR
     desc: Operator
