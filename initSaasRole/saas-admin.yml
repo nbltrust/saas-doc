@@ -105,6 +105,24 @@ permissionRules:
           advance
         zh-cn:
           高级
+  - 
+    key: roles
+    desc: roles
+    meta:
+      desc:
+        en:
+          roles
+        zh-cn:
+          角色
+  - 
+    key: users
+    desc: users
+    meta:
+      desc:
+        en:
+          users management
+        zh-cn:
+          用户管理
 
 
 
@@ -155,6 +173,12 @@ permissionGroups:
         value: 0x1F
       - 
         key: advance
+        value: 0x1F
+      - 
+        key: users
+        value: 0x1F
+      - 
+        key: roles
         value: 0x1F
   - 
     key: APPROVER
@@ -276,6 +300,12 @@ permissionGroups:
         value: 0x1F
       - 
         key: advance
+        value: 0x1F
+      - 
+        key: users
+        value: 0x1F
+      - 
+        key: roles
         value: 0x1F
 
 
