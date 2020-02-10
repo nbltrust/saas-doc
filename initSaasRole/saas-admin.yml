@@ -87,7 +87,7 @@ permissionRules:
           assets
         zh-cn:
           资产
-   - 
+  - 
     key: assets.sync_hub
     desc: sync hub
     meta:
