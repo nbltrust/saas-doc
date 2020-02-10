@@ -87,6 +87,15 @@ permissionRules:
           assets
         zh-cn:
           资产
+   - 
+    key: assets.sync_hub
+    desc: sync hub
+    meta:
+      desc:
+        en:
+          sync hub
+        zh-cn:
+          从hub同步数据
   - 
     key: package
     desc: package
@@ -169,6 +178,9 @@ permissionGroups:
         key: assets
         value: 0x1F
       - 
+        key: assets.sync_hub
+        value: 0x1F
+      - 
         key: package
         value: 0x1F
       - 
@@ -202,6 +214,9 @@ permissionGroups:
       - 
         key: assets
         value: 0x02
+      - 
+        key: assets.sync_hub
+        value: 0x1F
   - 
     key: OPERATOR
     desc: Operator
@@ -217,6 +232,9 @@ permissionGroups:
         value: 0x1F
       - 
         key: advance
+        value: 0x1F
+      - 
+        key: assets.sync_hub
         value: 0x1F
   - 
     key: OBSERVER
@@ -294,6 +312,9 @@ permissionGroups:
         value: 0x1F
       - 
         key: assets
+        value: 0x1F
+      - 
+        key: assets.sync_hub
         value: 0x1F
       - 
         key: package
