@@ -79,6 +79,15 @@ permissionRules:
         zh-cn:
           区块链
   - 
+    key: blockchains.sync_hub
+    desc: sync blockchains from hub
+    meta:
+      desc:
+        en:
+          sync blockchains from hub
+        zh-cn:
+          从hub同步区块链
+  - 
     key: assets
     desc: assets
     meta:
@@ -89,13 +98,13 @@ permissionRules:
           资产
   - 
     key: assets.sync_hub
-    desc: sync hub
+    desc: sync assets from hub
     meta:
       desc:
         en:
-          sync hub
+          sync assets from hub
         zh-cn:
-          从hub同步数据
+          从hub同步资产
   - 
     key: package
     desc: package
@@ -174,6 +183,9 @@ permissionGroups:
       - 
         key: blockchains
         value: 0x1F
+      -
+        key: blockchains.sync_hub
+        value: 0x1F
       - 
         key: assets
         value: 0x1F
@@ -217,6 +229,9 @@ permissionGroups:
       - 
         key: assets.sync_hub
         value: 0x1F
+      -
+        key: blockchains.sync_hub
+        value: 0x1F
       - 
         key: accounts
         value: 0x12
@@ -238,6 +253,9 @@ permissionGroups:
         value: 0x1F
       - 
         key: assets.sync_hub
+        value: 0x1F
+      -
+        key: blockchains.sync_hub
         value: 0x1F
   - 
     key: OBSERVER
@@ -312,6 +330,9 @@ permissionGroups:
         value: 0x1F
       - 
         key: blockchains
+        value: 0x1F
+      -
+        key: blockchains.sync_hub
         value: 0x1F
       - 
         key: assets
