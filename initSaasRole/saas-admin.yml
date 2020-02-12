@@ -217,6 +217,9 @@ permissionGroups:
       - 
         key: assets.sync_hub
         value: 0x1F
+      - 
+        key: accounts
+        value: 0x12
   - 
     key: OPERATOR
     desc: Operator
