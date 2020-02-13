@@ -1,6 +1,6 @@
 service:
   name: jadepool-saas
-  version: '1.6.0'
+  version: '2.1.0'
 # 权限规则定义配置
 
 
@@ -375,8 +375,15 @@ permissionRules:
           activity
         zh-cn:
           活动
-
-
+  - 
+    key: volume.volume
+    desc: volume
+    meta:
+      desc:
+        en:
+          volume
+        zh-cn:
+          名册
 
 # 权限组定义
 
@@ -673,6 +680,19 @@ permissionGroups:
         key: activity
         value: 0x02
 
+  - 
+    key: FINANCE.volume
+    desc: Volume
+    meta:
+      desc:
+        en:
+          volume
+        zh-cn:
+          名册
+    rules:
+      - 
+        key: volume.volume
+        value: 0x16
 
 # 角色定义
 
@@ -817,3 +837,31 @@ roles:
         key: ADMIN.funding
       -
         key: ADMIN.activity
+
+  - 
+    key: FINANCE
+    desc: Finance
+    meta:
+      name:
+        en:
+          Finance
+        zh-cn:
+          财务
+      desc:
+        en:
+          Finance
+        zh-cn:
+          财务
+    template: ~
+    groups:
+      - 
+        key: ADMIN.home
+      - 
+        key: OPERATOR.wallet
+      - 
+        key: ADMIN.transaction
+      -
+        key: ADMIN.activity
+      -
+        key: FINANCE.volume
+    rules: ~
