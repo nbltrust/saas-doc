@@ -205,6 +205,15 @@ permissionRules:
         zh-cn:
           设置审批
   - 
+    key: wallet.set_notify_recipients
+    desc: set notification recipient
+    meta:
+      desc:
+        en:
+          set notification recipient
+        zh-cn:
+          设置额外需要接收到系统业务通知的邮件列表
+  - 
     key: wallet.set_spending_limits
     desc: set spending limits
     meta:
@@ -468,6 +477,9 @@ permissionGroups:
         value: 0x16
       - 
         key: wallet.set_approval
+        value: 0x1F
+      -
+        key: wallet.set_notify_recipients
         value: 0x1F
       - 
         key: wallet.set_spending_limits
