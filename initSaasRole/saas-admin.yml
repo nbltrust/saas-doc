@@ -237,7 +237,10 @@ permissionGroups:
         value: 0x1F
       - 
         key: accounts
-        value: 0x12
+        value: 0x16
+      - 
+        key: wallets
+        value: 0x16
   - 
     key: OPERATOR
     desc: Operator
