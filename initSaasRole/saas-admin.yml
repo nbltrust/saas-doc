@@ -228,9 +228,12 @@ permissionGroups:
         value: 0x1F
       - 
         key: assets
-        value: 0x02
+        value: 0x1F
       - 
         key: assets.sync_hub
+        value: 0x1F
+      - 
+        key: blockchains
         value: 0x1F
       -
         key: blockchains.sync_hub
