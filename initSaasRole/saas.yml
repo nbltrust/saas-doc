@@ -739,6 +739,8 @@ roles:
         key: ADMIN.funding
       -
         key: ADMIN.activity
+      -
+        key: FINANCE.volume
     rules: ~
       
   - 
