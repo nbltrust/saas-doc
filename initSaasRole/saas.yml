@@ -1,6 +1,6 @@
 service:
   name: jadepool-saas
-  version: '2.1.0'
+  version: '2.2.0'
 # 权限规则定义配置
 
 
