@@ -662,9 +662,6 @@ permissionGroups:
       -
         key: company.manage_auth
         value: 0x1F
-      - 
-        key: volume.volume
-        value: 0x16
   - 
     key: ADMIN.funding
     desc: Funding
@@ -740,6 +737,8 @@ roles:
         key: ADMIN.funding
       -
         key: ADMIN.activity
+      - 
+        key: FINANCE.company
     rules: ~
       
   - 
