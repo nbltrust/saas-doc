@@ -392,7 +392,7 @@ permissionRules:
         en:
           volume
         zh-cn:
-          名册
+          名单
 
 # 权限组定义
 
@@ -662,6 +662,34 @@ permissionGroups:
       -
         key: company.manage_auth
         value: 0x1F
+      - 
+        key: volume.volume
+        value: 0x16
+  - 
+    key: CREATOR.company
+    desc: Company
+    meta:
+      desc:
+        en:
+          Company
+        zh-cn:
+          公司
+    rules:
+      - 
+        key: company.update_company_info
+        value: 0x05
+      - 
+        key: company.manage_api_key
+        value: 0x16
+      - 
+        key: company.manage_role
+        value: 0x16
+      - 
+        key: company.manage_user
+        value: 0x16
+      -
+        key: company.manage_auth
+        value: 0x1F
   - 
     key: ADMIN.funding
     desc: Funding
@@ -737,8 +765,6 @@ roles:
         key: ADMIN.funding
       -
         key: ADMIN.activity
-      - 
-        key: FINANCE.company
     rules: ~
       
   - 
@@ -844,7 +870,7 @@ roles:
       -
         key: ADMIN.transaction
       -
-        key: ADMIN.company
+        key: CREATOR.company
       -
         key: ADMIN.funding
       -
