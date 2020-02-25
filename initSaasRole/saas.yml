@@ -662,6 +662,9 @@ permissionGroups:
       -
         key: company.manage_auth
         value: 0x1F
+      - 
+        key: volume.volume
+        value: 0x16
   - 
     key: ADMIN.funding
     desc: Funding
@@ -691,20 +694,6 @@ permissionGroups:
       - 
         key: activity
         value: 0x02
-
-  - 
-    key: FINANCE.volume
-    desc: Volume
-    meta:
-      desc:
-        en:
-          volume
-        zh-cn:
-          名册
-    rules:
-      - 
-        key: volume.volume
-        value: 0x16
 
 # 角色定义
 
@@ -858,7 +847,7 @@ roles:
     meta:
       name:
         en:
-          FinancialOfficer
+          Financial Officer
         zh-cn:
           财务
       desc:
@@ -876,6 +865,6 @@ roles:
         key: ADMIN.transaction
       -
         key: ADMIN.activity
-      -
-        key: FINANCE.volume
     rules: ~
+      - 
+        key: volume.volume
