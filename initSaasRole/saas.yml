@@ -694,7 +694,19 @@ permissionGroups:
       - 
         key: activity
         value: 0x02
-
+  - 
+    key: FINANCE.company
+    desc: Company
+    meta:
+      desc:
+        en:
+          Company
+        zh-cn:
+          公司
+    rules:
+      - 
+        key: volume.volume
+        value: 0x16
 # 角色定义
 
 
@@ -863,6 +875,6 @@ roles:
         key: ADMIN.transaction
       -
         key: ADMIN.activity
+      -
+        key: FINANCE.company
     rules: ~
-      - 
-        key: volume.volume
