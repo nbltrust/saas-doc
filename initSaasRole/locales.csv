@@ -1,21 +1,21 @@
 path,en,zh-cn,ja
-staking.Day,Day, 天,
-staking.Daily_Delegate_Req,Daily_Delegate_Req, 每天抵押请求,
-staking.Daily_UnDelegate_Req,Daily_UnDelegate_Req, 每天解抵押请求,
-staking.Actually_Delegateed,Actually_Delegated, 实际抵押,
-staking.Should_UnDelegated,Should_UnDelegated, 应该解抵押,
-staking.Actually_UnDelegated,Actually_UnDelegated, 实际解抵押,
-staking.Interest,Interest, 利息,
-staking.Principal,Principal, 本金,
-staking.Cur_Delegated,Cur_Delegated, 当前抵押,
-staking.Cur_UnDelegated,Cur_UnDelegated, 当前解抵押,
-staking.Available_Staking_Balance,Available Balance of Staking Account, 抵押账户有效余额,
-staking.Total_Staking_Balance,Total Balance of Staking Account, 抵押账户总余额,
-staking.Available_Main_Balance,Available Balance of Main Account, 主账户有效余额,
-staking.Total_Balance,Total Balance, 总余额,
-staking.Date,Date,日期,
-staking.Expire_UnDel,Expire_UnDel, 到期解抵押,
-staking.Expect_Funding,Expect_Funding, 预期配资,
-staking.Funding_Require_From_Api,Funding_Require_From_Api, 通过api的配资请求,
-staking.Actually_Funding,Actually_Funding, 实际配资,
-staking.Funding_Gap,Funding_Gap, 配资差值,
+staking.Day,Day, 天,日
+staking.Daily_Delegate_Req,Daily_Delegate_Req, 每天抵押请求,毎日抵当リクエスト
+staking.Daily_UnDelegate_Req,Daily_UnDelegate_Req, 每天解抵押请求,毎日抵当解除リクエスト
+staking.Actually_Delegateed,Actually_Delegated, 实际抵押,実際抵当
+staking.Should_UnDelegated,Should_UnDelegated, 应该解抵押,抵当解除べき
+staking.Actually_UnDelegated,Actually_UnDelegated, 实际解抵押,実際抵当解除
+staking.Interest,Interest, 利息,利息
+staking.Principal,Principal, 本金,元金
+staking.Cur_Delegated,Cur_Delegated, 当前抵押,現在抵当
+staking.Cur_UnDelegated,Cur_UnDelegated, 当前解抵押,現在抵当解除
+staking.Available_Staking_Balance,Available Balance of Staking Account, 抵押账户有效余额,抵当アカウントの利用可能残高
+staking.Total_Staking_Balance,Total Balance of Staking Account, 抵押账户总余额,抵当アカウントの総残高
+staking.Available_Main_Balance,Available Balance of Main Account, 主账户有效余额,メインアカウントの利用可能残高
+staking.Total_Balance,Total Balance, 总余额,総残高
+staking.Date,Date,日期,日付
+staking.Expire_UnDel,Expire_UnDel, 到期解抵押,満期抵当解除
+staking.Expect_Funding,Expect_Funding, 预期配资,予期資金配分
+staking.Funding_Require_From_Api,Funding_Require_From_Api, 通过api的配资请求,APIから資金配分リクエスト
+staking.Actually_Funding,Actually_Funding, 实际配资,実際資金配分
+staking.Funding_Gap,Funding_Gap, 配资差值,資金配分差额
