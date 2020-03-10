@@ -15,6 +15,8 @@ permissionRules:
           assets proportion
         zh-cn:
           资产占比图
+        ja:
+          资产占比图
   - 
     key: home.history_balances
     desc: trend chart
@@ -23,6 +25,8 @@ permissionRules:
         en:
           trend chart
         zh-cn:
+          趋势图
+        ja:
           趋势图
   - 
     key: wallet.create_wallet
@@ -33,6 +37,8 @@ permissionRules:
           create wallet
         zh-cn:
           创建钱包
+        ja:
+          创建钱包
   - 
     key: wallet.delete_wallet
     desc: delete wallet
@@ -41,6 +47,8 @@ permissionRules:
         en:
           delete wallet
         zh-cn:
+          删除钱包
+        ja:
           删除钱包
   - 
     key: wallet.create_address
@@ -51,6 +59,8 @@ permissionRules:
           create address
         zh-cn:
           增加地址
+        ja:
+          增加地址
   - 
     key: wallet.delete_address
     desc: delete address
@@ -59,6 +69,8 @@ permissionRules:
         en:
           delete address
         zh-cn:
+          删除地址
+        ja:
           删除地址
   - 
     key: wallet.add_coins
@@ -69,6 +81,8 @@ permissionRules:
           add coins
         zh-cn:
           增加币种
+        ja:
+          增加币种
   - 
     key: wallet.delete_coins
     desc: delete coins
@@ -77,6 +91,8 @@ permissionRules:
         en:
           delete coins
         zh-cn:
+          删除币种
+        ja:
           删除币种
   - 
     key: wallet.switch_coins
@@ -87,6 +103,8 @@ permissionRules:
           switch coins
         zh-cn:
           开关币种
+        ja:
+          开关币种
   - 
     key: wallet.address_list
     desc: address list
@@ -95,6 +113,8 @@ permissionRules:
         en:
           address list
         zh-cn:
+          地址列表
+        ja:
           地址列表
   - 
     key: wallet.resend_notification
@@ -105,6 +125,8 @@ permissionRules:
           resend notification
         zh-cn:
           重发通知
+        ja:
+          重发通知
   - 
     key: wallet.order_approve
     desc: order approve
@@ -113,6 +135,8 @@ permissionRules:
         en:
           order approve
         zh-cn:
+          业务审批
+        ja:
           业务审批
   - 
     key: wallet.order_note
@@ -123,6 +147,8 @@ permissionRules:
           note order
         zh-cn:
           备注订单
+        ja:
+          备注订单
   - 
     key: wallet.exception_approve
     desc: exception approve
@@ -131,6 +157,8 @@ permissionRules:
         en:
           exception approve
         zh-cn:
+          异常处理
+        ja:
           异常处理
   - 
     key: wallet.update_wallet_info
@@ -141,6 +169,8 @@ permissionRules:
           update wallet info
         zh-cn:
           更新钱包信息
+        ja:
+          更新钱包信息
   - 
     key: wallet.change_wallet_password
     desc: change wallet password
@@ -149,6 +179,8 @@ permissionRules:
         en:
           change wallet password
         zh-cn:
+          修改钱包密码
+        ja:
           修改钱包密码
   - 
     key: wallet.reset_wallet_password
@@ -159,6 +191,8 @@ permissionRules:
           reset wallet password
         zh-cn:
           重置钱包密码
+        ja:
+          重置钱包密码
   - 
     key: wallet.freeze_wallet
     desc: freeze wallet
@@ -167,6 +201,8 @@ permissionRules:
         en:
           freeze wallet
         zh-cn:
+          冻结钱包
+        ja:
           冻结钱包
   - 
     key: wallet.manage_api_key
@@ -177,6 +213,8 @@ permissionRules:
           manage api key
         zh-cn:
           管理API KEY
+        ja:
+          管理API KEY
   - 
     key: wallet.manage_api_feature_switcher
     desc: manage api feature switcher
@@ -185,6 +223,8 @@ permissionRules:
         en:
           manage api feature switcher
         zh-cn:
+          管理API功能开关
+        ja:
           管理API功能开关
   - 
     key: wallet.set_outgoing_approval
@@ -195,6 +235,8 @@ permissionRules:
           set outgoing approval
         zh-cn:
           设置出账审批
+        ja:
+          设置出账审批
   - 
     key: wallet.set_approval
     desc: set approval
@@ -203,6 +245,8 @@ permissionRules:
         en:
           set approval
         zh-cn:
+          设置审批
+        ja:
           设置审批
   - 
     key: wallet.set_notify_recipients
@@ -213,6 +257,8 @@ permissionRules:
           set notification recipient
         zh-cn:
           设置额外需要接收到系统业务通知的邮件列表
+        ja:
+          设置额外需要接收到系统业务通知的邮件列表
   - 
     key: wallet.set_spending_limits
     desc: set spending limits
@@ -221,6 +267,8 @@ permissionRules:
         en:
           set spending limits
         zh-cn:
+          设置限额
+        ja:
           设置限额
   - 
     key: wallet.set_ip_whitelist
@@ -231,6 +279,8 @@ permissionRules:
           set ip whitelist
         zh-cn:
           设置IP白名单
+        ja:
+          设置IP白名单
   - 
     key: wallet.set_address_whitelist
     desc: set address whitelist
@@ -239,6 +289,8 @@ permissionRules:
         en:
           set address whitelist
         zh-cn:
+          设置地址白名单
+        ja:
           设置地址白名单
   - 
     key: wallet.set_address_blacklist
@@ -249,6 +301,8 @@ permissionRules:
           set address blacklist
         zh-cn:
           设置地址黑名单
+        ja:
+          设置地址黑名单
   -
     key: wallet.manage_staking_setting
     desc: manage staking setting  
@@ -257,6 +311,8 @@ permissionRules:
         en:
           manage staking setting
         zh-cn:
+          管理抵押设置
+        ja:
           管理抵押设置
   - 
     key: wallet.send
@@ -267,6 +323,8 @@ permissionRules:
           send
         zh-cn:
           转账
+        ja:
+          转账
   - 
     key: wallet.receive
     desc: receive
@@ -275,6 +333,8 @@ permissionRules:
         en:
           receive
         zh-cn:
+          收款
+        ja:
           收款
   - 
     key: wallet.delegate
@@ -285,6 +345,8 @@ permissionRules:
           delegate
         zh-cn:
           抵押
+        ja:
+          抵押
   - 
     key: wallet.undelegate
     desc: undelegate
@@ -293,6 +355,8 @@ permissionRules:
         en:
           undelegate
         zh-cn:
+          解抵押
+        ja:
           解抵押
   - 
     key: wallet.staking
@@ -303,6 +367,8 @@ permissionRules:
           staking
         zh-cn:
           抵押
+        ja:
+          抵押
   - 
     key: transaction
     desc: transaction
@@ -311,6 +377,8 @@ permissionRules:
         en:
           transaction
         zh-cn:
+          交易
+        ja:
           交易
   - 
     key: company.update_company_info
@@ -321,6 +389,8 @@ permissionRules:
           update company info
         zh-cn:
           更新公司信息
+        ja:
+          更新公司信息
   - 
     key: company.manage_api_key
     desc: manage api key
@@ -329,6 +399,8 @@ permissionRules:
         en:
           manage api key
         zh-cn:
+          管理API KEY
+        ja:
           管理API KEY
   - 
     key: company.manage_role
@@ -339,6 +411,8 @@ permissionRules:
           manage role
         zh-cn:
           角色管理
+        ja:
+          角色管理
   - 
     key: company.manage_user
     desc: manage user
@@ -347,6 +421,8 @@ permissionRules:
         en:
           manage user
         zh-cn:
+          用户管理
+        ja:
           用户管理
   - 
     key: company.manage_auth
@@ -357,6 +433,8 @@ permissionRules:
           manage authentication method
         zh-cn:
           认证方式管理
+        ja:
+          认证方式管理
   - 
     key: funding.funding
     desc: funding
@@ -365,6 +443,8 @@ permissionRules:
         en:
           funding
         zh-cn:
+          配资
+        ja:
           配资
   - 
     key: funding.history
@@ -375,6 +455,8 @@ permissionRules:
           history
         zh-cn:
           历史记录
+        ja:
+          历史记录
   - 
     key: activity
     desc: activity
@@ -384,6 +466,8 @@ permissionRules:
           activity
         zh-cn:
           活动
+        ja:
+          活动
   - 
     key: volume.volume
     desc: volume
@@ -392,6 +476,8 @@ permissionRules:
         en:
           volume
         zh-cn:
+          名单
+        ja:
           名单
 
 # 权限组定义
@@ -408,6 +494,8 @@ permissionGroups:
           Home
         zh-cn:
           首页
+        ja:
+          首页
     rules:
       - 
         key: home.balances
@@ -423,6 +511,8 @@ permissionGroups:
         en:
           Wallet
         zh-cn:
+          钱包
+        ja:
           钱包
     rules:
       - 
@@ -527,6 +617,8 @@ permissionGroups:
           Wallet
         zh-cn:
           钱包
+        ja:
+          钱包
     rules:
       - 
         key: wallet.address_list
@@ -567,6 +659,8 @@ permissionGroups:
           Wallet
         zh-cn:
           钱包
+        ja:
+          钱包
     rules:
       - 
         key: wallet.address_list
@@ -601,6 +695,8 @@ permissionGroups:
           Wallet
         zh-cn:
           钱包
+        ja:
+          钱包
     rules:
       - 
         key: wallet.address_list
@@ -620,6 +716,8 @@ permissionGroups:
           Wallet
         zh-cn:
           钱包
+        ja:
+          钱包
     rules:
       - 
         key: wallet.staking
@@ -633,6 +731,8 @@ permissionGroups:
           Transaction
         zh-cn:
           交易
+        ja:
+          交易
     rules:
       - 
         key: transaction
@@ -645,6 +745,8 @@ permissionGroups:
         en:
           Company
         zh-cn:
+          公司
+        ja:
           公司
     rules:
       - 
@@ -674,6 +776,8 @@ permissionGroups:
           Company
         zh-cn:
           公司
+        ja:
+          公司
     rules:
       - 
         key: company.update_company_info
@@ -699,6 +803,8 @@ permissionGroups:
           Funding
         zh-cn:
           配资
+        ja:
+          配资
     rules:
       - 
         key: funding.funding
@@ -715,6 +821,8 @@ permissionGroups:
           Activity
         zh-cn:
           活动
+        ja:
+          活动
     rules:
       - 
         key: activity
@@ -727,6 +835,8 @@ permissionGroups:
         en:
           Company
         zh-cn:
+          公司
+        ja:
           公司
     rules:
       - 
@@ -746,10 +856,14 @@ roles:
           Admin
         zh-cn:
           管理员
+        ja:
+          管理员
       desc:
         en:
           Administrator, own all of the authorities in the system
         zh-cn:
+          管理员，拥有系统中所有权限
+        ja:
           管理员，拥有系统中所有权限
     template: ~
     groups:
@@ -775,6 +889,8 @@ roles:
         en:
           Approver
         zh-cn:
+          审批员
+        ja:
           审批员
       desc:
         en:
@@ -803,10 +919,14 @@ roles:
           Operator
         zh-cn:
           操作员
+        ja:
+          操作员
       desc:
         en:
           Operator, bussiness sponsor, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate
         zh-cn:
+          操作员，业务发起人，拥有发起业务的权限，比如提现/抵押/解抵押
+        ja:
           操作员，业务发起人，拥有发起业务的权限，比如提现/抵押/解抵押
     template: ~
     groups:
@@ -830,10 +950,14 @@ roles:
           Observer
         zh-cn:
           观察员
+        ja:
+          观察员
       desc:
         en:
           Observer, only own the authorities to look up the business and information
         zh-cn:
+          观察员，只能查看系统中的数据，没有操作权限
+        ja:
           观察员，只能查看系统中的数据，没有操作权限
     template: ~
     groups:
@@ -856,10 +980,14 @@ roles:
           Creator
         zh-cn:
           创建者
+        ja:
+          创建者
       desc:
         en:
           Creator, who create the company, own the authorities manage users and roles
         zh-cn:
+          创建者，机构的创建者，拥有管理用户及角色的权限
+        ja:
           创建者，机构的创建者，拥有管理用户及角色的权限
     template: ~
     groups:
@@ -885,10 +1013,14 @@ roles:
           Financial Officer
         zh-cn:
           财务
+        ja:
+          财务
       desc:
         en:
           Financial Officer, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate/batch transer
         zh-cn:
+          财务，拥有发起业务的权限，比如提现/抵押/解抵押/批量转账
+        ja:
           财务，拥有发起业务的权限，比如提现/抵押/解抵押/批量转账
     template: ~
     groups:
