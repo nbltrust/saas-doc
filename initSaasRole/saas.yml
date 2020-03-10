@@ -393,6 +393,15 @@ permissionRules:
           volume
         zh-cn:
           名单
+  - 
+    key: issuetoken.issuetoken
+    desc: issuetoken
+    meta:
+      desc:
+        en:
+          issuetoken
+        zh-cn:
+          资产发行
 
 # 权限组定义
 
@@ -664,6 +673,9 @@ permissionGroups:
         value: 0x1F
       - 
         key: volume.volume
+        value: 0x16
+      - 
+        key: issuetoken.issuetoken
         value: 0x16
   - 
     key: CREATOR.company
