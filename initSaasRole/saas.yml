@@ -27,7 +27,7 @@ permissionRules:
         zh-cn:
           趋势图
         ja:
-          トレンドグラフ
+          動向図
   - 
     key: wallet.create_wallet
     desc: create wallet
