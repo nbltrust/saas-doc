@@ -402,7 +402,8 @@ permissionRules:
           issuetoken
         zh-cn:
           资产发行
-
+        ja:
+          資産発行
 # 权限组定义
 
 
