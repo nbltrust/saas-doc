@@ -6,7 +6,7 @@ service:
 
 
 permissionRules:
-  - 
+  -
     key: home.balances
     desc: balances
     meta:
@@ -17,7 +17,7 @@ permissionRules:
           资产占比图
         ja:
           資産比率図
-  - 
+  -
     key: home.history_balances
     desc: trend chart
     meta:
@@ -28,7 +28,7 @@ permissionRules:
           趋势图
         ja:
           動向図
-  - 
+  -
     key: wallet.create_wallet
     desc: create wallet
     meta:
@@ -39,7 +39,7 @@ permissionRules:
           创建钱包
         ja:
           ウォレットを作成する
-  - 
+  -
     key: wallet.delete_wallet
     desc: delete wallet
     meta:
@@ -50,7 +50,7 @@ permissionRules:
           删除钱包
         ja:
           ウォレットを削除する
-  - 
+  -
     key: wallet.create_address
     desc: create address
     meta:
@@ -61,7 +61,7 @@ permissionRules:
           增加地址
         ja:
           アドレスを作成する
-  - 
+  -
     key: wallet.delete_address
     desc: delete address
     meta:
@@ -72,7 +72,7 @@ permissionRules:
           删除地址
         ja:
           アドレスを削除する
-  - 
+  -
     key: wallet.add_coins
     desc: add coins
     meta:
@@ -83,7 +83,7 @@ permissionRules:
           增加币种
         ja:
           コインを追加する
-  - 
+  -
     key: wallet.delete_coins
     desc: delete coins
     meta:
@@ -94,7 +94,7 @@ permissionRules:
           删除币种
         ja:
           コインを削除する
-  - 
+  -
     key: wallet.switch_coins
     desc: switch coins
     meta:
@@ -105,7 +105,7 @@ permissionRules:
           开关币种
         ja:
           コインスイッチ
-  - 
+  -
     key: wallet.address_list
     desc: address list
     meta:
@@ -115,8 +115,8 @@ permissionRules:
         zh-cn:
           地址列表
         ja:
-          アドレスリストコインスイッチ
-  - 
+          アドレスリスト
+  -
     key: wallet.resend_notification
     desc: resend notification
     meta:
@@ -127,7 +127,7 @@ permissionRules:
           重发通知
         ja:
           通知を再送る
-  - 
+  -
     key: wallet.order_approve
     desc: order approve
     meta:
@@ -138,7 +138,7 @@ permissionRules:
           业务审批
         ja:
           業務審査
-  - 
+  -
     key: wallet.order_note
     desc: note order
     meta:
@@ -149,7 +149,7 @@ permissionRules:
           备注订单
         ja:
           コメント注文
-  - 
+  -
     key: wallet.exception_approve
     desc: exception approve
     meta:
@@ -160,7 +160,7 @@ permissionRules:
           异常处理
         ja:
           異常処理
-  - 
+  -
     key: wallet.update_wallet_info
     desc: update wallet info
     meta:
@@ -171,7 +171,7 @@ permissionRules:
           更新钱包信息
         ja:
           ウォレット情報を更新する
-  - 
+  -
     key: wallet.change_wallet_password
     desc: change wallet password
     meta:
@@ -182,7 +182,7 @@ permissionRules:
           修改钱包密码
         ja:
           ウォレットのパスワードを変更する
-  - 
+  -
     key: wallet.reset_wallet_password
     desc: reset wallet password
     meta:
@@ -193,7 +193,7 @@ permissionRules:
           重置钱包密码
         ja:
           ウォレットのパスワードをリセットする
-  - 
+  -
     key: wallet.freeze_wallet
     desc: freeze wallet
     meta:
@@ -204,7 +204,7 @@ permissionRules:
           冻结钱包
         ja:
           凍結ウォレット
-  - 
+  -
     key: wallet.manage_api_key
     desc: manage api key
     meta:
@@ -215,7 +215,7 @@ permissionRules:
           管理API KEY
         ja:
           管理APIキー
-  - 
+  -
     key: wallet.manage_api_feature_switcher
     desc: manage api feature switcher
     meta:
@@ -226,7 +226,7 @@ permissionRules:
           管理API功能开关
         ja:
           管理API機能スイッチ
-  - 
+  -
     key: wallet.set_outgoing_approval
     desc: set outgoing approval
     meta:
@@ -237,7 +237,7 @@ permissionRules:
           设置出账审批
         ja:
           出金審査設定
-  - 
+  -
     key: wallet.set_approval
     desc: set approval
     meta:
@@ -248,7 +248,7 @@ permissionRules:
           设置审批
         ja:
           審査設定
-  - 
+  -
     key: wallet.set_notify_recipients
     desc: set notification recipient
     meta:
@@ -259,7 +259,7 @@ permissionRules:
           设置额外需要接收到系统业务通知的邮件列表
         ja:
           通知受信者設定。
-  - 
+  -
     key: wallet.set_spending_limits
     desc: set spending limits
     meta:
@@ -270,7 +270,7 @@ permissionRules:
           设置限额
         ja:
           限度額設定
-  - 
+  -
     key: wallet.set_ip_whitelist
     desc: set ip whitelist
     meta:
@@ -281,7 +281,7 @@ permissionRules:
           设置IP白名单
         ja:
           IP白リスト設定
-  - 
+  -
     key: wallet.set_address_whitelist
     desc: set address whitelist
     meta:
@@ -292,7 +292,7 @@ permissionRules:
           设置地址白名单
         ja:
           アドレス白リスト設定
-  - 
+  -
     key: wallet.set_address_blacklist
     desc: set address blacklist
     meta:
@@ -305,7 +305,7 @@ permissionRules:
           アドレスブラックリスト設定
   -
     key: wallet.manage_staking_setting
-    desc: manage staking setting  
+    desc: manage staking setting
     meta:
       desc:
         en:
@@ -314,7 +314,7 @@ permissionRules:
           管理抵押设置
         ja:
           管理抵当設定
-  - 
+  -
     key: wallet.send
     desc: send
     meta:
@@ -324,8 +324,8 @@ permissionRules:
         zh-cn:
           转账
         ja:
-          送る
-  - 
+          出金
+  -
     key: wallet.receive
     desc: receive
     meta:
@@ -335,8 +335,8 @@ permissionRules:
         zh-cn:
           收款
         ja:
-          受取る
-  - 
+          入金
+  -
     key: wallet.delegate
     desc: delegate
     meta:
@@ -347,7 +347,7 @@ permissionRules:
           抵押
         ja:
           抵当
-  - 
+  -
     key: wallet.undelegate
     desc: undelegate
     meta:
@@ -358,7 +358,7 @@ permissionRules:
           解抵押
         ja:
           抵当解除
-  - 
+  -
     key: wallet.staking
     desc: staking
     meta:
@@ -369,7 +369,7 @@ permissionRules:
           抵押
         ja:
           抵当
-  - 
+  -
     key: transaction
     desc: transaction
     meta:
@@ -380,7 +380,7 @@ permissionRules:
           交易
         ja:
           取引
-  - 
+  -
     key: company.update_company_info
     desc: update company info
     meta:
@@ -390,8 +390,8 @@ permissionRules:
         zh-cn:
           更新公司信息
         ja:
-          会社情報を更新する
-  - 
+          会社情報更新
+  -
     key: company.manage_api_key
     desc: manage api key
     meta:
@@ -401,8 +401,8 @@ permissionRules:
         zh-cn:
           管理API KEY
         ja:
-          管理APIキー
-  - 
+          APIキー管理
+  -
     key: company.manage_role
     desc: manage role
     meta:
@@ -413,7 +413,7 @@ permissionRules:
           角色管理
         ja:
           ロール管理
-  - 
+  -
     key: company.manage_user
     desc: manage user
     meta:
@@ -424,7 +424,7 @@ permissionRules:
           用户管理
         ja:
           ユーザー管理
-  - 
+  -
     key: company.manage_auth
     desc: manage auth method
     meta:
@@ -435,7 +435,7 @@ permissionRules:
           认证方式管理
         ja:
           認証方法管理
-  - 
+  -
     key: funding.funding
     desc: funding
     meta:
@@ -446,7 +446,7 @@ permissionRules:
           配资
         ja:
           資金配分
-  - 
+  -
     key: funding.history
     desc: history
     meta:
@@ -457,7 +457,7 @@ permissionRules:
           历史记录
         ja:
           歴史
-  - 
+  -
     key: activity
     desc: activity
     meta:
@@ -468,7 +468,7 @@ permissionRules:
           活动
         ja:
           活動
-  - 
+  -
     key: volume.volume
     desc: volume
     meta:
@@ -485,7 +485,7 @@ permissionRules:
 
 
 permissionGroups:
-  - 
+  -
     key: ADMIN.home
     desc: Home
     meta:
@@ -497,13 +497,13 @@ permissionGroups:
         ja:
           ホームページ
     rules:
-      - 
+      -
         key: home.balances
         value: 0x02
-      - 
+      -
         key: home.history_balances
         value: 0x02
-  - 
+  -
     key: ADMIN.wallet
     desc: Wallet
     meta:
@@ -515,100 +515,100 @@ permissionGroups:
         ja:
           ウォレット
     rules:
-      - 
+      -
         key: wallet.create_wallet
         value: 0x17
-      - 
+      -
         key: wallet.delete_wallet
         value: 0x1F
-      - 
+      -
         key: wallet.create_address
         value: 0x1F
-      - 
+      -
         key: wallet.delete_address
         value: 0x1F
-      - 
+      -
         key: wallet.add_coins
         value: 0x17
-      - 
+      -
         key: wallet.delete_coins
         value: 0x18
-      - 
+      -
         key: wallet.switch_coins
         value: 0x17
-      - 
+      -
         key: wallet.address_list
         value: 0x16
       -
         key: wallet.resend_notification
         value: 0x16
-      - 
+      -
         key: wallet.order_approve
         value: 0x17
       -
         key: wallet.order_note
         value: 0x1F
-      - 
+      -
         key: wallet.exception_approve
         value: 0x17
-      - 
+      -
         key: wallet.update_wallet_info
         value: 0x04
-      - 
+      -
         key: wallet.change_wallet_password
         value: 0x16
-      - 
+      -
         key: wallet.reset_wallet_password
         value: 0x16
-      - 
+      -
         key: wallet.freeze_wallet
         value: 0x16
-      - 
+      -
         key: wallet.manage_api_key
         value: 0x16
-      - 
+      -
         key: wallet.manage_api_feature_switcher
         value: 0x16
-      - 
+      -
         key: wallet.set_outgoing_approval
         value: 0x16
-      - 
+      -
         key: wallet.set_approval
         value: 0x1F
       -
         key: wallet.set_notify_recipients
         value: 0x1F
-      - 
+      -
         key: wallet.set_spending_limits
         value: 0x16
-      - 
+      -
         key: wallet.set_ip_whitelist
         value: 0x16
-      - 
+      -
         key: wallet.set_address_whitelist
         value: 0x16
-      - 
+      -
         key: wallet.set_address_blacklist
         value: 0x16
       -
         key: wallet.manage_staking_setting
         value: 0x16
-      - 
+      -
         key: wallet.send
         value: 0x16
-      - 
+      -
         key: wallet.receive
         value: 0x16
-      - 
+      -
         key: wallet.delegate
         value: 0x16
-      - 
+      -
         key: wallet.undelegate
         value: 0x16
-      - 
+      -
         key: wallet.staking
         value: 0x02
-  - 
+  -
     key: APPROVER.wallet
     desc: Wallet
     meta:
@@ -620,37 +620,37 @@ permissionGroups:
         ja:
           ウォレット
     rules:
-      - 
+      -
         key: wallet.address_list
         value: 0x16
       -
         key: wallet.resend_notification
         value: 0x16
-      - 
+      -
         key: wallet.order_approve
         value: 0x17
       -
         key: wallet.order_note
         value: 0x1F
-      - 
+      -
         key: wallet.exception_approve
         value: 0x17
-      - 
+      -
         key: wallet.send
         value: 0x16
-      - 
+      -
         key: wallet.receive
         value: 0x16
-      - 
+      -
         key: wallet.delegate
         value: 0x16
-      - 
+      -
         key: wallet.undelegate
         value: 0x16
-      - 
+      -
         key: wallet.staking
         value: 0x02
-  - 
+  -
     key: OPERATOR.wallet
     desc: Wallet
     meta:
@@ -662,31 +662,31 @@ permissionGroups:
         ja:
           ウォレット
     rules:
-      - 
+      -
         key: wallet.address_list
         value: 0x16
       -
         key: wallet.resend_notification
         value: 0x16
-      - 
+      -
         key: wallet.send
         value: 0x16
-      - 
+      -
         key: wallet.receive
         value: 0x16
-      - 
+      -
         key: wallet.delegate
         value: 0x16
-      - 
+      -
         key: wallet.undelegate
         value: 0x16
-      - 
+      -
         key: wallet.staking
         value: 0x02
       -
         key: wallet.order_note
         value: 0x1F
-  - 
+  -
     key: OBSERVER.wallet
     desc: Wallet
     meta:
@@ -698,16 +698,16 @@ permissionGroups:
         ja:
           ウォレット
     rules:
-      - 
+      -
         key: wallet.address_list
         value: 0x16
       -
         key: wallet.resend_notification
         value: 0x16
-      - 
+      -
         key: wallet.staking
         value: 0x02
-  - 
+  -
     key: SUPER_ADMIN.wallet
     desc: Wallet
     meta:
@@ -719,10 +719,10 @@ permissionGroups:
         ja:
           ウォレット
     rules:
-      - 
+      -
         key: wallet.staking
         value: 0x02
-  - 
+  -
     key: ADMIN.transaction
     desc: Transaction
     meta:
@@ -734,10 +734,10 @@ permissionGroups:
         ja:
           取引
     rules:
-      - 
+      -
         key: transaction
         value: 0x02
-  - 
+  -
     key: ADMIN.company
     desc: Company
     meta:
@@ -749,25 +749,25 @@ permissionGroups:
         ja:
           会社
     rules:
-      - 
+      -
         key: company.update_company_info
         value: 0x05
-      - 
+      -
         key: company.manage_api_key
         value: 0x16
-      - 
+      -
         key: company.manage_role
         value: 0x16
-      - 
+      -
         key: company.manage_user
         value: 0x16
       -
         key: company.manage_auth
         value: 0x1F
-      - 
+      -
         key: volume.volume
         value: 0x16
-  - 
+  -
     key: CREATOR.company
     desc: Company
     meta:
@@ -779,22 +779,22 @@ permissionGroups:
         ja:
           会社
     rules:
-      - 
+      -
         key: company.update_company_info
         value: 0x05
-      - 
+      -
         key: company.manage_api_key
         value: 0x16
-      - 
+      -
         key: company.manage_role
         value: 0x16
-      - 
+      -
         key: company.manage_user
         value: 0x16
       -
         key: company.manage_auth
         value: 0x1F
-  - 
+  -
     key: ADMIN.funding
     desc: Funding
     meta:
@@ -806,10 +806,10 @@ permissionGroups:
         ja:
           資金配分
     rules:
-      - 
+      -
         key: funding.funding
         value: 0x16
-      - 
+      -
         key: funding.history
         value: 0x02
   -
@@ -824,10 +824,10 @@ permissionGroups:
         ja:
           活動
     rules:
-      - 
+      -
         key: activity
         value: 0x02
-  - 
+  -
     key: FINANCE.company
     desc: Company
     meta:
@@ -839,7 +839,7 @@ permissionGroups:
         ja:
           会社
     rules:
-      - 
+      -
         key: volume.volume
         value: 0x16
 # 角色定义
@@ -847,7 +847,7 @@ permissionGroups:
 
 
 roles:
-  - 
+  -
     key: ADMIN
     desc: Administrator
     meta:
@@ -864,10 +864,10 @@ roles:
         zh-cn:
           管理员，拥有系统中所有权限
         ja:
-          管理者は、システム内のすべての権限を持っています。
+          管理人は、システム内のすべての権限を持っています。
     template: ~
     groups:
-      - 
+      -
         key: ADMIN.home
       -
         key: ADMIN.wallet
@@ -880,8 +880,8 @@ roles:
       -
         key: ADMIN.activity
     rules: ~
-      
-  - 
+
+  -
     key: APPROVER
     desc: Approver
     meta:
@@ -896,23 +896,21 @@ roles:
         en:
           Approver, own the authorities include business approval and exception handling
         zh-cn:
-          审批人，拥有业务审批和异常处理相关的权限
-        ja:
           審査人は、業務審査と異常処理に関する権限を持っています
     template: ~
     groups:
-      - 
+      -
         key: ADMIN.home
-      - 
+      -
         key: APPROVER.wallet
-      - 
+      -
         key: ADMIN.transaction
       -
         key: ADMIN.activity
     rules: ~
 
 
-  - 
+  -
     key: OPERATOR
     desc: Operator
     meta:
@@ -932,18 +930,18 @@ roles:
           操作人は、業務の発起人で、例えば現金/抵当/抵当解除などの業務を開始する権限を持っています。
     template: ~
     groups:
-      - 
+      -
         key: ADMIN.home
-      - 
+      -
         key: OPERATOR.wallet
-      - 
+      -
         key: ADMIN.transaction
       -
         key: ADMIN.activity
     rules: ~
 
 
-  - 
+  -
     key: OBSERVER
     desc: Observer
     meta:
@@ -963,17 +961,17 @@ roles:
           観察人は、システム中のデータを見るだけで、操作権限がありません。
     template: ~
     groups:
-      - 
+      -
         key: ADMIN.home
-      - 
+      -
         key: OBSERVER.wallet
-      - 
+      -
         key: ADMIN.transaction
       -
         key: ADMIN.activity
     rules: ~
-  
-  - 
+
+  -
     key: SUPER_ADMIN
     desc: Creator
     meta:
@@ -990,10 +988,10 @@ roles:
         zh-cn:
           创建者，机构的创建者，拥有管理用户及角色的权限
         ja:
-          創建者は、機構の創建者で、ユーザーとロールを管理する権限を持っています。
+          創建人は、機構の創建人で、ユーザーとロールを管理する権限を持っています。
     template: ~
     groups:
-      - 
+      -
         key: ADMIN.home
       -
         key: SUPER_ADMIN.wallet
@@ -1006,7 +1004,7 @@ roles:
       -
         key: ADMIN.activity
 
-  - 
+  -
     key: FINANCIAL_OFFICER
     desc: Financial Officer
     meta:
@@ -1026,11 +1024,11 @@ roles:
           財務人は、例えば出金/抵当/抵当解除/一括振替などの業務を開始する権限を持っています。
     template: ~
     groups:
-      - 
+      -
         key: ADMIN.home
-      - 
+      -
         key: OPERATOR.wallet
-      - 
+      -
         key: ADMIN.transaction
       -
         key: ADMIN.activity
