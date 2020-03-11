@@ -896,6 +896,8 @@ roles:
         en:
           Approver, own the authorities include business approval and exception handling
         zh-cn:
+          审批人，拥有业务审批和异常处理相关的权限
+        ja:
           審査人は、業務審査と異常処理に関する権限を持っています
     template: ~
     groups:
