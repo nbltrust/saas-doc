@@ -150,17 +150,6 @@ permissionRules:
         ja:
           コメント注文
   -
-    key: wallet.exception_approve
-    desc: exception approve
-    meta:
-      desc:
-        en:
-          exception approve
-        zh-cn:
-          异常处理
-        ja:
-          異常処理
-  -
     key: wallet.update_wallet_info
     desc: update wallet info
     meta:
@@ -239,11 +228,11 @@ permissionRules:
           出金審査設定
   -
     key: wallet.set_approval
-    desc: set approval
+    desc: set approval threshold
     meta:
       desc:
         en:
-          set approval
+          set approval threshold
         zh-cn:
           设置审批
         ja:
@@ -470,11 +459,11 @@ permissionRules:
           活動
   -
     key: volume.volume
-    desc: volume
+    desc: batch transfer
     meta:
       desc:
         en:
-          volume
+          batch transfer
         zh-cn:
           名单
         ja:
@@ -548,9 +537,6 @@ permissionGroups:
       -
         key: wallet.order_note
         value: 0x1F
-      -
-        key: wallet.exception_approve
-        value: 0x17
       -
         key: wallet.update_wallet_info
         value: 0x04
@@ -632,9 +618,6 @@ permissionGroups:
       -
         key: wallet.order_note
         value: 0x1F
-      -
-        key: wallet.exception_approve
-        value: 0x17
       -
         key: wallet.send
         value: 0x16
@@ -796,11 +779,11 @@ permissionGroups:
         value: 0x1F
   -
     key: ADMIN.funding
-    desc: Funding
+    desc: Fund
     meta:
       desc:
         en:
-          Funding
+          Fund
         zh-cn:
           配资
         ja:
@@ -894,7 +877,7 @@ roles:
           審査人
       desc:
         en:
-          Approver, own the authorities include business approval and exception handling
+          Approver, own the authorities include business approval
         zh-cn:
           审批人，拥有业务审批和异常处理相关的权限
         ja:

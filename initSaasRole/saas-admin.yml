@@ -141,6 +141,15 @@ permissionRules:
           users management
         zh-cn:
           用户管理
+  - 
+    key: hotwallet
+    desc: hot wallet
+    meta:
+      desc:
+        en:
+          hot wallet
+        zh-cn:
+          热钱包
 
 
 
@@ -203,6 +212,9 @@ permissionGroups:
         value: 0x1F
       - 
         key: roles
+        value: 0x1F
+      -
+        key: hotwallet
         value: 0x1F
   - 
     key: APPROVER
@@ -360,6 +372,9 @@ permissionGroups:
         value: 0x1F
       - 
         key: roles
+        value: 0x1F
+      -
+        key: hotwallet
         value: 0x1F
 
 
