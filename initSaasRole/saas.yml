@@ -469,6 +469,17 @@ permissionRules:
         ja:
           名簿
 
+  - 
+    key: issuetoken.issuetoken
+    desc: issuetoken
+    meta:
+      desc:
+        en:
+          issuetoken
+        zh-cn:
+          资产发行
+        ja:
+          資産発行
 # 权限组定义
 
 
@@ -750,7 +761,10 @@ permissionGroups:
       -
         key: volume.volume
         value: 0x16
-  -
+      - 
+        key: issuetoken.issuetoken
+        value: 0x16
+  - 
     key: CREATOR.company
     desc: Company
     meta:
