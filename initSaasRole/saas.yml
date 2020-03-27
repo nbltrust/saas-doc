@@ -761,9 +761,9 @@ permissionGroups:
       -
         key: volume.volume
         value: 0x16
-      - 
-        key: issuetoken.issuetoken
-        value: 0x16
+      # - 
+      #   key: issuetoken.issuetoken
+      #   value: 0x16
   - 
     key: CREATOR.company
     desc: Company
