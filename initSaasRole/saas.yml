@@ -468,7 +468,6 @@ permissionRules:
           名单
         ja:
           名簿
-
   - 
     key: issuetoken.issuetoken
     desc: issuetoken
@@ -480,6 +479,61 @@ permissionRules:
           资产发行
         ja:
           資産発行
+  - 
+    key: message.deposit
+    desc: deposit
+    meta:
+      desc:
+        en:
+          deposit
+        zh-cn:
+          充值
+        ja:
+          
+  - 
+    key: message.withdraw
+    desc: withdraw
+    meta:
+      desc:
+        en:
+          withdraw
+        zh-cn:
+          提现
+        ja:
+          出金
+  - 
+    key: message.staking
+    desc: staking
+    meta:
+      desc:
+        en:
+          staking
+        zh-cn:
+          抵押
+        ja:
+          抵当
+  - 
+    key: message.approval
+    desc: outgoing approval
+    meta:
+      desc:
+        en:
+          outgoing approval
+        zh-cn:
+          出账审批
+        ja:
+          出金審査
+  - 
+    key: message.login
+    desc: login
+    meta:
+      desc:
+        en:
+          login
+        zh-cn:
+          登录
+        ja:
+          
 # 权限组定义
 
 
@@ -839,6 +893,87 @@ permissionGroups:
       -
         key: volume.volume
         value: 0x16
+  -
+    key: ADMIN.message
+    desc: Notification
+    meta:
+      desc:
+        en:
+          Notification
+        zh-cn:
+          通知
+        ja:
+          
+    rules:
+      -
+        key: message.deposit
+        value: 0x1F
+      -
+        key: message.withdraw
+        value: 0x1F
+      -
+        key: message.staking
+        value: 0x1F
+      -
+        key: message.approval
+        value: 0x1F
+      -
+        key: message.login
+        value: 0x1F
+  -
+    key: SUPER_ADMIN.message
+    desc: Notification
+    meta:
+      desc:
+        en:
+          Notification
+        zh-cn:
+          通知
+        ja:
+          
+    rules:
+      -
+        key: message.login
+        value: 0x1F
+  -
+    key: APPROVER.message
+    desc: Notification
+    meta:
+      desc:
+        en:
+          Notification
+        zh-cn:
+          通知
+        ja:
+          
+    rules:
+      -
+        key: message.approval
+        value: 0x1F
+      -
+        key: message.login
+        value: 0x1F
+  -
+    key: OPERATOR.message
+    desc: Notification
+    meta:
+      desc:
+        en:
+          Notification
+        zh-cn:
+          通知
+        ja:
+          
+    rules:
+      -
+        key: message.deposit
+        value: 0x1F
+      -
+        key: message.withdraw
+        value: 0x1F
+      -
+        key: message.login
+        value: 0x1F
 # 角色定义
 
 
@@ -876,6 +1011,8 @@ roles:
         key: ADMIN.funding
       -
         key: ADMIN.activity
+      -
+        key: ADMIN.message
     rules: ~
 
   -
@@ -906,6 +1043,8 @@ roles:
         key: ADMIN.transaction
       -
         key: ADMIN.activity
+      -
+        key: APPROVER.message
     rules: ~
 
 
@@ -937,6 +1076,8 @@ roles:
         key: ADMIN.transaction
       -
         key: ADMIN.activity
+      -
+        key: OPERATOR.message
     rules: ~
 
 
@@ -968,6 +1109,8 @@ roles:
         key: ADMIN.transaction
       -
         key: ADMIN.activity
+      -
+        key: SUPER_ADMIN.message
     rules: ~
 
   -
@@ -1002,6 +1145,8 @@ roles:
         key: ADMIN.funding
       -
         key: ADMIN.activity
+      -
+        key: SUPER_ADMIN.message
 
   -
     key: FINANCIAL_OFFICER
@@ -1033,4 +1178,6 @@ roles:
         key: ADMIN.activity
       -
         key: FINANCE.company
+      -
+        key: SUPER_ADMIN.message
     rules: ~
