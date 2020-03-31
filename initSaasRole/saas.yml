@@ -489,6 +489,7 @@ permissionRules:
         zh-cn:
           充值
         ja:
+          入金
           
   - 
     key: message.withdraw
@@ -533,7 +534,7 @@ permissionRules:
         zh-cn:
           登录
         ja:
-          
+          ログイン
 # 权限组定义
 
 
@@ -903,7 +904,7 @@ permissionGroups:
         zh-cn:
           通知
         ja:
-          
+          通知   
     rules:
       -
         key: message.deposit
@@ -930,7 +931,7 @@ permissionGroups:
         zh-cn:
           通知
         ja:
-          
+          通知
     rules:
       -
         key: message.login
@@ -945,7 +946,7 @@ permissionGroups:
         zh-cn:
           通知
         ja:
-          
+          通知
     rules:
       -
         key: message.approval
@@ -963,7 +964,7 @@ permissionGroups:
         zh-cn:
           通知
         ja:
-          
+          通知
     rules:
       -
         key: message.deposit
