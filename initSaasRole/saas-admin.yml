@@ -386,6 +386,9 @@ permissionGroups:
       -
         key: hotwallet
         value: 0x1F
+      -
+        key: issuetoken
+        value: 0x1F
 
 
 # 角色定义
