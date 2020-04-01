@@ -150,8 +150,15 @@ permissionRules:
           hot wallet
         zh-cn:
           热钱包
-
-
+  - 
+    key: issuetoken
+    desc: issuetoken
+    meta:
+      desc:
+        en:
+          issuetoken
+        zh-cn:
+          资产发行
 
 # 权限组定义
 
@@ -215,6 +222,9 @@ permissionGroups:
         value: 0x1F
       -
         key: hotwallet
+        value: 0x1F
+      -
+        key: issuetoken
         value: 0x1F
   - 
     key: APPROVER
