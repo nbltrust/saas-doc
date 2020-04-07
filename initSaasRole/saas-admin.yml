@@ -151,21 +151,12 @@ permissionRules:
         zh-cn:
           热钱包
   - 
-    key: issuetoken.approve
-    desc: issuetoken approve
+    key: issuetoken
+    desc: issuetoken
     meta:
       desc:
         en:
-          issuetoken approve
-        zh-cn:
-          资产发行
-  - 
-    key: issuetoken.view 
-    desc: issuetoken view
-    meta:
-      desc:
-        en:
-          issuetoken view
+          issuetoken
         zh-cn:
           资产发行
 
@@ -233,10 +224,7 @@ permissionGroups:
         key: hotwallet
         value: 0x1F
       -
-        key: issuetoken.approve
-        value: 0x1F
-      -
-        key: issuetoken.view
+        key: issuetoken
         value: 0x1F
   - 
     key: APPROVER
@@ -279,10 +267,7 @@ permissionGroups:
         key: wallets
         value: 0x16
       -
-        key: issuetoken.approve
-        value: 0x1F
-      -
-        key: issuetoken.view
+        key: issuetoken
         value: 0x1F
   - 
     key: OPERATOR
@@ -347,8 +332,8 @@ permissionGroups:
         key: advance
         value: 0x02
       -
-        key: issuetoken.view
-        value: 0x1F
+        key: issuetoken
+        value: 0x02
   - 
     key: SUPER_ADMIN
     desc: SuperAdmin
@@ -408,10 +393,7 @@ permissionGroups:
         key: hotwallet
         value: 0x1F
       -
-        key: issuetoken.approve
-        value: 0x1F
-      -
-        key: issuetoken.view
+        key: issuetoken
         value: 0x1F
 
 
