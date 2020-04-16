@@ -535,6 +535,17 @@ permissionRules:
           登录
         ja:
           ログイン
+  -
+    key: addressbook.addressbook
+    desc: addressbook
+    meta:
+      desc:
+        en:
+          addrssbook
+        zh-cn:
+          地址簿
+        ja:
+          アドレス帳
 # 权限组定义
 
 
@@ -818,6 +829,9 @@ permissionGroups:
         value: 0x16
       - 
         key: issuetoken.issuetoken
+        value: 0x16
+      - 
+        key: addressbook.addressbook
         value: 0x16
   - 
     key: CREATOR.company
