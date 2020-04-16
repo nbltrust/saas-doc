@@ -536,16 +536,16 @@ permissionRules:
         ja:
           ログイン
   -
-    key: addressbook.addressbook
-    desc: addressbook
+    key: addressbook.operate
+    desc: operate addressbook
     meta:
       desc:
         en:
-          addrssbook
+          operate addressbook
         zh-cn:
-          地址簿
+          操作地址簿
         ja:
-          アドレス帳
+          アドレス帳の操作
 # 权限组定义
 
 
@@ -831,7 +831,7 @@ permissionGroups:
         key: issuetoken.issuetoken
         value: 0x16
       - 
-        key: addressbook.addressbook
+        key: addressbook.operate
         value: 0x16
   - 
     key: CREATOR.company
