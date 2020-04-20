@@ -426,15 +426,15 @@ permissionRules:
           認証方法管理
   -
     key: funding.funding
-    desc: funding
+    desc: transfer
     meta:
       desc:
         en:
-          funding
+          Transfer
         zh-cn:
-          配资
+          划转
         ja:
-          資金配分
+          振替
   -
     key: funding.delivery
     desc: delivery
@@ -470,15 +470,15 @@ permissionRules:
           活動
   -
     key: volume.volume
-    desc: batch transfer
+    desc: batch withdraw
     meta:
       desc:
         en:
-          batch transfer
+          batch withdraw
         zh-cn:
-          名单
+          批量提现
         ja:
-          名簿
+          一括出金
   - 
     key: issuetoken.issuetoken
     desc: issuetoken
@@ -723,15 +723,15 @@ permissionGroups:
         value: 0x02
   -
     key: APPROVER.funding
-    desc: Fund
+    desc: transfer
     meta:
       desc:
         en:
-          Fund
+          Transfer
         zh-cn:
-          配资
+          划转
         ja:
-          資金配分
+          振替
     rules:
       -
         key: funding.delivery
@@ -891,15 +891,15 @@ permissionGroups:
         value: 0x1F
   -
     key: ADMIN.funding
-    desc: Fund
+    desc: transfer
     meta:
       desc:
         en:
-          Fund
+          Transfer
         zh-cn:
-          配资
+          划转
         ja:
-          資金配分
+          振替
     rules:
       -
         key: funding.funding
@@ -1023,15 +1023,15 @@ permissionGroups:
         value: 0x1F
   -
     key: OPERATOR.funding
-    desc: Fund
+    desc: transfer
     meta:
       desc:
         en:
-          Fund
+          Transfer
         zh-cn:
-          配资
+          划转
         ja:
-          資金配分
+          振替
     rules:
       -
         key: funding.funding
@@ -1230,11 +1230,11 @@ roles:
           財務人
       desc:
         en:
-          Financial Officer, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate/batch transer
+          Financial Officer, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate/batch withdraw
         zh-cn:
-          财务，拥有发起业务的权限，比如提现/抵押/解抵押/批量转账
+          财务，拥有发起业务的权限，比如提现/抵押/解抵押/批量提现
         ja:
-          財務人は、例えば出金/抵当/抵当解除/一括振替などの業務を開始する権限を持っています。
+          財務人は、例えば出金/抵当/抵当解除/一括出金などの業務を開始する権限を持っています。
     template: ~
     groups:
       -
