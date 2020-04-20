@@ -436,6 +436,17 @@ permissionRules:
         ja:
           資金配分
   -
+    key: funding.delivery
+    desc: delivery
+    meta:
+      desc:
+        en:
+          delivery
+        zh-cn:
+          交割
+        ja:
+          受け渡し
+  -
     key: funding.history
     desc: history
     meta:
@@ -711,6 +722,24 @@ permissionGroups:
         key: wallet.staking
         value: 0x02
   -
+    key: APPROVER.funding
+    desc: Fund
+    meta:
+      desc:
+        en:
+          Fund
+        zh-cn:
+          配资
+        ja:
+          資金配分
+    rules:
+      -
+        key: funding.delivery
+        value: 0x16
+      -
+        key: funding.history
+        value: 0x02
+  -
     key: OPERATOR.wallet
     desc: Wallet
     meta:
@@ -876,6 +905,9 @@ permissionGroups:
         key: funding.funding
         value: 0x16
       -
+        key: funding.delivery
+        value: 0x02
+      -
         key: funding.history
         value: 0x02
   -
@@ -989,6 +1021,24 @@ permissionGroups:
       -
         key: message.login
         value: 0x1F
+  -
+    key: OPERATOR.funding
+    desc: Fund
+    meta:
+      desc:
+        en:
+          Fund
+        zh-cn:
+          配资
+        ja:
+          資金配分
+    rules:
+      -
+        key: funding.funding
+        value: 0x16
+      -
+        key: funding.history
+        value: 0x02
 # 角色定义
 
 
@@ -1060,6 +1110,8 @@ roles:
         key: ADMIN.activity
       -
         key: APPROVER.message
+      -
+        key: APPROVER.funding
     rules: ~
 
 
@@ -1093,6 +1145,8 @@ roles:
         key: ADMIN.activity
       -
         key: OPERATOR.message
+      -
+        key: OPERATOR.funding
     rules: ~
 
 
