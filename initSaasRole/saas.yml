@@ -906,7 +906,7 @@ permissionGroups:
         value: 0x16
       -
         key: funding.delivery
-        value: 0x02
+        value: 0x16
       -
         key: funding.history
         value: 0x02
