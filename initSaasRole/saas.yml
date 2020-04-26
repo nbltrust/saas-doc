@@ -425,6 +425,17 @@ permissionRules:
         ja:
           認証方法管理
   -
+    key: company.report
+    desc: report
+    meta:
+      desc:
+        en:
+          report
+        zh-cn:
+          报表
+        ja:
+          報告書
+  -
     key: funding.funding
     desc: transfer
     meta:
@@ -862,6 +873,9 @@ permissionGroups:
       - 
         key: addressbook.operate
         value: 0x16
+      -
+        key: company.report
+        value: 0x16
   - 
     key: CREATOR.company
     desc: Company
@@ -939,6 +953,9 @@ permissionGroups:
     rules:
       -
         key: volume.volume
+        value: 0x16
+      -
+        key: company.report
         value: 0x16
   -
     key: ADMIN.message

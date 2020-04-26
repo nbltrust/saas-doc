@@ -159,6 +159,15 @@ permissionRules:
           issuetoken
         zh-cn:
           资产发行
+  - 
+    key: report
+    desc: report
+    meta:
+      desc:
+        en:
+          report
+        zh-cn:
+          报表
 
 # 权限组定义
 
@@ -225,6 +234,9 @@ permissionGroups:
         value: 0x1F
       -
         key: issuetoken
+        value: 0x1F
+      -
+        key: report
         value: 0x1F
   - 
     key: APPROVER
@@ -334,6 +346,9 @@ permissionGroups:
       -
         key: issuetoken
         value: 0x02
+      -
+        key: report
+        value: 0x02
   - 
     key: SUPER_ADMIN
     desc: SuperAdmin
@@ -394,6 +409,9 @@ permissionGroups:
         value: 0x1F
       -
         key: issuetoken
+        value: 0x1F
+      -
+        key: report
         value: 0x1F
 
 
