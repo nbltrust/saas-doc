@@ -751,6 +751,21 @@ permissionGroups:
         key: funding.history
         value: 0x02
   -
+    key: APPROVER.company
+    desc: Company
+    meta:
+      desc:
+        en:
+          Company
+        zh-cn:
+          公司
+        ja:
+          会社
+    rules:
+      - 
+        key: addressbook.operate
+        value: 0x16
+  -
     key: OPERATOR.wallet
     desc: Wallet
     meta:
@@ -1056,6 +1071,21 @@ permissionGroups:
       -
         key: funding.history
         value: 0x02
+  -
+    key: OPERATOR.company
+    desc: Company
+    meta:
+      desc:
+        en:
+          Company
+        zh-cn:
+          公司
+        ja:
+          会社
+    rules:
+      - 
+        key: addressbook.operate
+        value: 0x16
 # 角色定义
 
 
@@ -1129,6 +1159,8 @@ roles:
         key: APPROVER.message
       -
         key: APPROVER.funding
+      -
+        key: APPROVER.company
     rules: ~
 
 
@@ -1164,6 +1196,8 @@ roles:
         key: OPERATOR.message
       -
         key: OPERATOR.funding
+      -
+        key: OPERATOR.company
     rules: ~
 
 
