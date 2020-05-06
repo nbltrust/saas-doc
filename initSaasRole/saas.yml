@@ -1237,8 +1237,8 @@ roles:
         key: ADMIN.transaction
       -
         key: ADMIN.activity
-      -
-        key: SUPER_ADMIN.message
+      # -
+      #   key: SUPER_ADMIN.message
     rules: ~
 
   -
@@ -1273,8 +1273,8 @@ roles:
         key: ADMIN.funding
       -
         key: ADMIN.activity
-      -
-        key: SUPER_ADMIN.message
+      # -
+      #   key: SUPER_ADMIN.message
 
   -
     key: FINANCIAL_OFFICER
@@ -1306,6 +1306,6 @@ roles:
         key: ADMIN.activity
       -
         key: FINANCE.company
-      -
-        key: SUPER_ADMIN.message
+      # -
+      #   key: SUPER_ADMIN.message
     rules: ~
