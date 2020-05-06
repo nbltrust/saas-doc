@@ -557,6 +557,17 @@ permissionRules:
           登录
         ja:
           ログイン
+  - 
+    key: message.issue_token
+    desc: issue token
+    meta:
+      desc:
+        en:
+          issue token
+        zh-cn:
+          资产发行
+        ja:
+          資産発行
   -
     key: addressbook.operate
     desc: operate addressbook
@@ -999,6 +1010,9 @@ permissionGroups:
       -
         key: message.login
         value: 0x1F
+      -
+        key: message.issue_token
+        value: 0x1F
   -
     key: SUPER_ADMIN.message
     desc: Notification
@@ -1025,6 +1039,9 @@ permissionGroups:
     rules:
       -
         key: message.approval
+        value: 0x1F
+      -
+        key: message.issue_token
         value: 0x1F
   -
     key: OPERATOR.message
