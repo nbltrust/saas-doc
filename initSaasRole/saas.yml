@@ -966,24 +966,6 @@ permissionGroups:
         key: activity
         value: 0x02
   -
-    key: FINANCE.company
-    desc: Company
-    meta:
-      desc:
-        en:
-          Company
-        zh-cn:
-          公司
-        ja:
-          会社
-    rules:
-      -
-        key: volume.volume
-        value: 0x16
-      -
-        key: company.report
-        value: 0x16
-  -
     key: ADMIN.message
     desc: Notification
     meta:
@@ -1093,6 +1075,9 @@ permissionGroups:
     rules:
       - 
         key: addressbook.operate
+        value: 0x16
+      -
+        key: volume.volume
         value: 0x16
 # 角色定义
 
@@ -1275,37 +1260,3 @@ roles:
         key: ADMIN.activity
       -
         key: SUPER_ADMIN.message
-
-  -
-    key: FINANCIAL_OFFICER
-    desc: Financial Officer
-    meta:
-      name:
-        en:
-          Financial Officer
-        zh-cn:
-          财务
-        ja:
-          財務人
-      desc:
-        en:
-          Financial Officer, own the authorities about sponsoring businesses, eg.withdraw/delegate/undelegate/batch withdraw
-        zh-cn:
-          财务，拥有发起业务的权限，比如提现/抵押/解抵押/批量提现
-        ja:
-          財務人は、例えば出金/抵当/抵当解除/一括出金などの業務を開始する権限を持っています。
-    template: ~
-    groups:
-      -
-        key: ADMIN.home
-      -
-        key: OPERATOR.wallet
-      -
-        key: ADMIN.transaction
-      -
-        key: ADMIN.activity
-      -
-        key: FINANCE.company
-      -
-        key: SUPER_ADMIN.message
-    rules: ~
