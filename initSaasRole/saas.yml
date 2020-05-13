@@ -1079,6 +1079,9 @@ permissionGroups:
       -
         key: volume.volume
         value: 0x16
+      -
+        key: company.report
+        value: 0x16
 # 角色定义
 
 
