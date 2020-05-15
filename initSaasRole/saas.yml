@@ -834,6 +834,21 @@ permissionGroups:
         key: wallet.staking
         value: 0x02
   -
+    key: OBSERVER.funding
+    desc: transfer
+    meta:
+      desc:
+        en:
+          Transfer
+        zh-cn:
+          划转
+        ja:
+          振替
+    rules:
+      -
+        key: funding.history
+        value: 0x02
+  -
     key: SUPER_ADMIN.wallet
     desc: Wallet
     meta:
@@ -1225,8 +1240,8 @@ roles:
         key: ADMIN.transaction
       -
         key: ADMIN.activity
-      # -
-      #   key: SUPER_ADMIN.message
+      -
+        key: OBSERVER.funding
     rules: ~
 
   -
