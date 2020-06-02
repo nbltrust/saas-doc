@@ -579,6 +579,37 @@ permissionRules:
           操作地址簿
         ja:
           アドレス帳の操作
+  -
+    key: trading.query
+    desc: trading query
+    meta:
+      desc:
+        en:
+          trading query
+        zh-cn:
+          trading查询
+        ja:
+  -
+    key: trading.account
+    desc: trading account
+    meta:
+      desc:
+        en:
+          trading account
+        zh-cn:
+          操作交易所账号
+        ja:        
+  -
+    key: trading.transfer
+    desc: trading transfer
+    meta:
+      desc:
+        en:
+          trading transfer
+        zh-cn:
+          trading转账
+        ja:
+          
 # 权限组定义
 
 
@@ -1097,6 +1128,42 @@ permissionGroups:
       -
         key: company.report
         value: 0x16
+  -
+    key: COMMON.trading
+    desc: trading
+    meta:
+      desc:
+        en:
+          Trading
+        zh-cn:
+          交易所
+        ja:
+          市場
+    rules:
+      -
+        key: trading.query
+        value: 0x16
+  -
+    key: ADMIN.trading
+    desc: trading
+    meta:
+      desc:
+        en:
+          Trading
+        zh-cn:
+          交易所
+        ja:
+          市場
+    rules:
+      -
+        key: trading.query
+        value: 0x16
+      -
+        key: trading.account
+        value: 0x16
+      -
+        key: trading.transfer
+        value: 0x1F
 # 角色定义
 
 
@@ -1136,6 +1203,8 @@ roles:
         key: ADMIN.activity
       -
         key: ADMIN.message
+      -
+        key: ADMIN.trading
     rules: ~
 
   -
@@ -1172,6 +1241,8 @@ roles:
         key: APPROVER.funding
       -
         key: APPROVER.company
+      -
+        key: COMMON.trading
     rules: ~
 
 
@@ -1209,6 +1280,8 @@ roles:
         key: OPERATOR.funding
       -
         key: OPERATOR.company
+      -
+        key: ADMIN.trading
     rules: ~
 
 
@@ -1242,6 +1315,8 @@ roles:
         key: ADMIN.activity
       -
         key: OBSERVER.funding
+      -
+        key: COMMON.trading
     rules: ~
 
   -
@@ -1276,3 +1351,5 @@ roles:
         key: ADMIN.funding
       -
         key: ADMIN.activity
+      -
+        key: COMMON.trading
