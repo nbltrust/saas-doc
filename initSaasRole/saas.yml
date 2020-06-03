@@ -568,6 +568,28 @@ permissionRules:
           资产发行
         ja:
           資産発行
+  - 
+    key: message.trading_transfer
+    desc: trading transfer
+    meta:
+      desc:
+        en:
+          trading transfer
+        zh-cn:
+          trading transfer
+        ja:
+          trading transfer
+  - 
+    key: message.otc
+    desc: otc
+    meta:
+      desc:
+        en:
+          otc
+        zh-cn:
+          otc
+        ja:
+          otc
   -
     key: addressbook.operate
     desc: operate addressbook
@@ -1073,6 +1095,12 @@ permissionGroups:
         value: 0x1F
       -
         key: message.issue_token
+        value: 0x1F
+      -
+        key: message.trading_transfer
+        value: 0x1F
+      -
+        key: message.otc
         value: 0x1F
   -
     key: SUPER_ADMIN.message
