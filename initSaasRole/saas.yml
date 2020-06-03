@@ -609,6 +609,39 @@ permissionRules:
         zh-cn:
           trading转账
         ja:
+  -
+    key: otc.customer
+    desc: otc customer
+    meta:
+      desc:
+        en:
+          otc customer
+        zh-cn:
+          otc customer
+        ja:
+          otc customer
+  -
+    key: otc.customer_accept
+    desc: otc customer accept
+    meta:
+      desc:
+        en:
+          otc customer accept
+        zh-cn:
+          otc customer accept
+        ja:
+          otc customer accept
+  -
+    key: otc.provider
+    desc: otc provider
+    meta:
+      desc:
+        en:
+          otc provider
+        zh-cn:
+          otc provider
+        ja:
+          otc provider
           
 # 权限组定义
 
@@ -1164,6 +1197,45 @@ permissionGroups:
       -
         key: trading.transfer
         value: 0x1F
+  -
+    key: ADMIN.otc
+    desc: otc
+    meta:
+      desc:
+        en:
+          OTC
+        zh-cn:
+          OTC
+        ja:
+          OTC
+    rules:
+      -
+        key: otc.customer
+        value: 0x1F
+      -
+        key: otc.provider
+        value: 0x1F
+      -
+        key: otc.customer_accept
+        value: 0x1F
+  -
+    key: APPROVER.otc
+    desc: otc
+    meta:
+      desc:
+        en:
+          OTC
+        zh-cn:
+          OTC
+        ja:
+          OTC
+    rules:
+      -
+        key: otc.customer
+        value: 0x1F
+      -
+        key: otc.provider
+        value: 0x1F
 # 角色定义
 
 
@@ -1205,6 +1277,8 @@ roles:
         key: ADMIN.message
       -
         key: ADMIN.trading
+      -
+        key: ADMIN.otc
     rules: ~
 
   -
@@ -1243,6 +1317,8 @@ roles:
         key: APPROVER.company
       -
         key: COMMON.trading
+      -
+        key: APPROVER.otc
     rules: ~
 
 
@@ -1282,6 +1358,8 @@ roles:
         key: OPERATOR.company
       -
         key: ADMIN.trading
+      -
+        key: ADMIN.otc
     rules: ~
 
 
@@ -1317,6 +1395,8 @@ roles:
         key: OBSERVER.funding
       -
         key: COMMON.trading
+      -
+        key: APPROVER.otc
     rules: ~
 
   -
@@ -1353,3 +1433,5 @@ roles:
         key: ADMIN.activity
       -
         key: COMMON.trading
+      -
+        key: APPROVER.otc
