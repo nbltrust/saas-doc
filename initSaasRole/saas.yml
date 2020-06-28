@@ -1099,9 +1099,9 @@ permissionGroups:
       -
         key: message.trading_transfer
         value: 0x1F
-#       -
-#         key: message.otc
-#         value: 0x1F
+      -
+        key: message.otc
+        value: 0x1F
   -
     key: SUPER_ADMIN.message
     desc: Notification
@@ -1305,8 +1305,8 @@ roles:
         key: ADMIN.message
       -
         key: ADMIN.trading
-#       -
-#         key: ADMIN.otc
+      -
+        key: ADMIN.otc
     rules: ~
 
   -
@@ -1345,8 +1345,8 @@ roles:
         key: APPROVER.company
       -
         key: COMMON.trading
-#       -
-#         key: APPROVER.otc
+      -
+        key: APPROVER.otc
     rules: ~
 
 
@@ -1386,8 +1386,8 @@ roles:
         key: OPERATOR.company
       -
         key: ADMIN.trading
-#       -
-#         key: ADMIN.otc
+      -
+        key: ADMIN.otc
     rules: ~
 
 
@@ -1423,8 +1423,8 @@ roles:
         key: OBSERVER.funding
       -
         key: COMMON.trading
-#       -
-#         key: APPROVER.otc
+      -
+        key: APPROVER.otc
     rules: ~
 
   -
@@ -1461,5 +1461,5 @@ roles:
         key: ADMIN.activity
       -
         key: COMMON.trading
-#       -
-#         key: APPROVER.otc
+      -
+        key: APPROVER.otc
