@@ -576,7 +576,7 @@ permissionRules:
         en:
           trading transfer
         zh-cn:
-          trading transfer
+          trading转账
         ja:
           trading transfer
   - 
@@ -639,7 +639,7 @@ permissionRules:
         en:
           otc customer
         zh-cn:
-          otc customer
+          查看大宗交易
         ja:
           otc customer
   -
@@ -650,7 +650,7 @@ permissionRules:
         en:
           otc customer accept
         zh-cn:
-          otc customer accept
+          操作大宗交易
         ja:
           otc customer accept
   -
@@ -661,7 +661,7 @@ permissionRules:
         en:
           otc provider
         zh-cn:
-          otc provider
+          大宗交易服务管理
         ja:
           otc provider
           
