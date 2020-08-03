@@ -47,7 +47,7 @@ server {
         }
 }
  ```
- - 在proxy_http_version 1.1下面增加两行
+ - 在proxy_http_version 1.1下面增加两行（如果已有无需添加）
  ```bash
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection "Upgrade";
