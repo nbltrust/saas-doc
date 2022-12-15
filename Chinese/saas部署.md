@@ -29,12 +29,15 @@
 CREATE USER saas WITH PASSWORD 'xxxxxx';
 CREATE DATABASE saas;
 CREATE DATABASE kyc_database;
-GRANT ALL PRIVILEGES ON DATABASE saas to saas;
 ```
 - 安装并启动redis
 注意：数据库和redis密码，需要与config配置文件相同。
 
 
+#### 部署seed服务
+1.
+2.
+3.
 
 #### 部署saas后端服务
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
@@ -42,7 +45,7 @@ GRANT ALL PRIVILEGES ON DATABASE saas to saas;
 cd $WORKSPACE
 tar -xzvf jadepool-saas-backend-V6.2.1-ubuntu.tar.gz
 ```
-2.数据导入
+2. 数据导入
 - pro.yml文件放置在jadepool-saas-svr/config
 - saas-pro.yml文件放置在jadepool-saas-svr/pm2
 - admin和kyc_database需要导入到数据库里
