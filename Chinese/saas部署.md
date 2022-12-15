@@ -52,13 +52,13 @@ tar -xzvf jadepool-saas-backend-V6.2.1-ubuntu.tar.gz
 
 
 3. 启动saas后端服务
-- 导入权限
+- 导入权限，在jadepool-saas-svr目录下导入
  ```bash
 env=pro ./bin/cli -op migrateSAASRoles
  ```
-- 启动
+- 启动，在jadepool-saas-svr目录下启动
 ```bash
-pm2 start ./pm2/saas-prod.yaml
+pm2 start pm2/saas-pro.yaml
 ```
 
 #### 部署saas前端代码
