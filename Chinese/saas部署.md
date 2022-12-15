@@ -9,7 +9,6 @@
 
  - saas后端，包括admin,kyc-api两个服务
  - saas前端，主要连接saas后端admin服务
- - go, v1.14.2
  - postgres数据库, v11.2+
  - redis数据库, v5.0.3+
  - seed服务
