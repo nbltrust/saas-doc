@@ -65,6 +65,7 @@ env=pro ./bin/cli -op migrateSAASRoles
 ```bash
 pm2 start pm2/saas-pro.yaml
 ```
+4. 执行sql语句
 
 #### 部署saas前端代码
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
