@@ -1,16 +1,17 @@
 ### jadepool saas部署文档
 #### 版本
-|版本|修订日期 |修订人 |
-|--|--|--|
-| V6.2.0 | 2022-12-15 | shaw |
+|版本|修订日期 |修订人 |修订人 |
+|--|--|--|--|
+| V6.2.0 | 2022-12-15 | shaw |lucifer|
 #### 环境准备及依赖组件安装
 
 最基础的一套saas,需要启动这些服务:
 
- - saas后端，包括api, jp, admin, superadmin, order server五个不同的服务
+ - saas后端，包括admin,kyc-api两个服务
  - saas前端，主要连接saas后端admin服务
  - postgres数据库, v11.2+
  - redis数据库, v5.0.3+
+ - go,v1.14.2
  - seed服务
 
 	 
