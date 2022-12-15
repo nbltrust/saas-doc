@@ -9,8 +9,8 @@
 
  - saas后端，包括admin,kyc-api两个服务
  - saas前端，主要连接saas后端admin服务
- - postgres数据库, v11.2+
- - redis数据库, v5.0.3+
+ - postgres数据库, 
+ - redis数据库, 
  - seed服务
  - nginx
 
@@ -56,10 +56,7 @@ tar -xzvf jadepool-saas-backend-V6.2.1-ubuntu.tar.gz
 
 
 3. 启动saas后端服务
-- 导入权限，在jadepool-saas-svr目录下导入
- ```bash
-env=pro ./bin/cli -op migrateSAASRoles
- ```
+
 - 启动，在jadepool-saas-svr目录下启动
 ```bash
 pm2 start pm2/saas-pro.yaml
