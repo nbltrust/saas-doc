@@ -29,9 +29,10 @@
 CREATE USER saas WITH PASSWORD 'xxxxxx';
 CREATE DATABASE saas;
 CREATE DATABASE kyc_database;
+CREATE DATABASE log_database;
 ```
 - 安装并启动redis
-注意：数据库和redis密码，需要与config配置文件相同。
+
 
 
 #### 部署seed服务
@@ -47,6 +48,9 @@ tar -xzvf jadepool-saas-backend-V6.2.1-ubuntu.tar.gz
 ```
 2. 数据导入
 - pro.yml文件放置在jadepool-saas-svr/config
+```bash
+1.需要修改对应数据库和redis的ip和密码
+```
 - saas-pro.yml文件放置在jadepool-saas-svr/pm2
 - admin和kyc_database需要导入到数据库里
 
