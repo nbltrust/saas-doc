@@ -13,6 +13,7 @@
  - postgres数据库, v11.2+
  - redis数据库, v5.0.3+
  - seed服务
+ - nginx
 
 	 
 部署过程
@@ -70,13 +71,10 @@ pm2 start pm2/saas-pro.yaml
 
 ```bash
 cd $WORKSPACE
-tar -xzvf jadepool-saas-frontend-V1.5.3-math-ubuntu.tar.gz
+tar -xzvf jadepool-saas-frontend-V6.2.0-hkcustody-ubuntu.tar.gz
 ```
 2. 安装nginx
-```bash
-sudo apt update
-sudo apt install -y nginx
-```
+
 3. 使用nginx反向代理指向saas前端静态文件, nginx配置参考
 ```bash
 server {
@@ -84,7 +82,7 @@ server {
   server_name default;
   index 200.html index.html;
   # 此处填写jadepool-saas-frontend路径
-  root /opt/jadepool/saas/V1.7.1/jadepool-saas-frontend;
+  root /opt/jadepool/saas/V6.2.0/jadepool-saas-frontend;
   location / {
     add_header Access-Control-Allow-Origin *;
     add_header Access-Control-Allow-Methods "POST, HEAD, PUT, PATCH, GET, DELETE";
