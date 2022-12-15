@@ -5,7 +5,7 @@
 | V6.2.0 | 2022-12-15 | shaw |lucifer|zhangyang |
 #### 环境准备及依赖组件安装
 
-最基础的一套saas,需要启动这些服务:
+ 最基础的一套saas,需要启动这些服务:
 
  - saas后端，包括admin,kyc-api两个服务
  - saas前端，主要连接saas后端admin服务
@@ -15,7 +15,7 @@
  - nginx
 
 	 
-部署过程
+#### 一、部署过程
 1. 建议服务器配置：
 
 > 4核8G内存2M带宽以上，ubuntu16.04
@@ -35,12 +35,12 @@ CREATE DATABASE log_database;
 
 
 
-#### 部署seed服务
+#### 二、部署seed服务
 1.
 2.
 3.
 
-#### 部署saas后端服务
+#### 三、部署saas后端服务
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
 ```bash
 cd $WORKSPACE
@@ -49,21 +49,23 @@ tar -xzvf jadepool-saas-backend-V6.2.1-ubuntu.tar.gz
 2. 数据导入
 - pro.yml文件放置在jadepool-saas-svr/config
 ```bash
-1.需要修改对应数据库和redis的ip和密码
+需要修改对应数据库和redis的ip和密码
 ```
 - saas-pro.yml文件放置在jadepool-saas-svr/pm2
 - admin和kyc_database需要导入到数据库里
-
-
-3. 启动saas后端服务
+3. 执行sql语句
+```bash
+zhangyang
+```
+4. 启动saas后端服务
 
 - 启动，在jadepool-saas-svr目录下启动
 ```bash
 pm2 start pm2/saas-pro.yaml
 ```
-4. 执行sql语句
 
-#### 部署saas前端代码
+
+#### 四、部署saas前端代码
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
 
 ```bash
