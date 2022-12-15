@@ -9,9 +9,9 @@
 
  - saas后端，包括admin,kyc-api两个服务
  - saas前端，主要连接saas后端admin服务
+ - go, v1.14.2
  - postgres数据库, v11.2+
  - redis数据库, v5.0.3+
- - go,v1.14.2
  - seed服务
 
 	 
@@ -21,28 +21,18 @@
 > 4核8G内存2M带宽以上，ubuntu16.04
 
 2. 预先安装：
-
+- 安装go
 - 安装postgres
-```bash
-sudo apt update
-sudo apt install -y postgresql postgresql-contrib
-```
 - postgres新增saas用户及database
-```bash
-sudo -u postgres psql -U postgres -d postgres
-```
 ```sql
 # 新增saas用户及database sql
 CREATE USER saas WITH PASSWORD 'xxxxxx';
-CREATE DATABASE saas OWNER saas;
+CREATE DATABASE saas;
+CREATE DATABASE kyc_database;
 GRANT ALL PRIVILEGES ON DATABASE saas to saas;
 ```
 - 安装并启动redis
-```bash
-sudo apt-get install redis-server
-sudo systemctl enable redis-server.service
-```
-数据库和redis密码，需要与config配置文件相同。
+注意：数据库和redis密码，需要与config配置文件相同。
 
 
 
@@ -52,8 +42,18 @@ sudo systemctl enable redis-server.service
 cd $WORKSPACE
 tar -xzvf jadepool-saas-backend-V6.2.1-ubuntu.tar.gz
 ```
+2.数据导入
+- pro.yml文件放置在jadepool-saas-svr/config
+- saas-pro.yml文件放置在jadepool-saas-svr/pm2
+- admin和kyc_database需要导入到数据库里
 
-2. 启动saas后端服务
+
+3. 启动saas后端服务
+- 导入权限
+ ```bash
+env=pro ./bin/cli -op migrateSAASRoles
+ ```
+- 启动
 ```bash
 pm2 start ./pm2/saas-prod.yaml
 ```
