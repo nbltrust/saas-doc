@@ -22,7 +22,7 @@
 > 4核8G内存2M带宽以上，ubuntu16.04
 
 2. 预先安装：
-- 安装go
+
 - 安装postgres
 - postgres新增saas用户及database
 ```sql
