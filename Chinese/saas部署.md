@@ -13,6 +13,7 @@
  - redis数据库, 
  - seed服务
  - nginx
+ - Elasticsearch
 
 	 
 #### 一、部署过程
