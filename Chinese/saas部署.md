@@ -50,7 +50,7 @@ tar -xzvf jadepool-saas-backend-V6.2.1-ubuntu.tar.gz
 2. 数据导入
 - pro.yml文件放置在jadepool-saas-svr/config
 ```bash
-需要修改对应数据库和redis的ip和密码
+需要修改对应数据库和redis的ip
 ```
 - saas-pro.yml文件放置在jadepool-saas-svr/pm2
 - admin和kyc_database需要导入到数据库里
