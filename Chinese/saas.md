@@ -37,9 +37,10 @@ CREATE DATABASE log_database;
 
 
 #### 二、部署seed服务
-1.
-2.
-3.
+1、tmux new -s seed_saas
+2、创建seed_saas文件夹
+3、进入seed_saas， 执行./seed 设置密码 
+4、启动./seed
 
 #### 三、部署saas后端服务
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
@@ -104,3 +105,4 @@ server {
 }
 ```
 #### 五、部署官网代码
+可以参考部署saas前端代码
