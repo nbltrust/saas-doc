@@ -77,7 +77,7 @@ tar -xzvf jadepool-saas-frontend-V6.2.0-hkcustody-ubuntu.tar.gz
 ```
 ```bash
 cd $WORKSPACE
-tar -xzvf jadepool-saas-frontend-V6.2.0-hkcustody-ubuntu.tar.gz
+tar -xzvf jadepool-saas-admin-V6.2.0-prefix-ubuntu.tar.gz
 ```
 2. 安装nginx
 
