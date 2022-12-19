@@ -75,6 +75,10 @@ pm2 start pm2/saas-pro.yaml
 cd $WORKSPACE
 tar -xzvf jadepool-saas-frontend-V6.2.0-hkcustody-ubuntu.tar.gz
 ```
+```bash
+cd $WORKSPACE
+tar -xzvf jadepool-saas-frontend-V6.2.0-hkcustody-ubuntu.tar.gz
+```
 2. 安装nginx
 
 3. 使用nginx反向代理指向saas前端静态文件, nginx配置参考
