@@ -68,6 +68,7 @@ pm2 start pm2/saas-pro.yaml
 
 
 #### 四、部署saas前端代码
+- 部署saas前端admin代码时，希望可以只允许上海ip能够访问该页面。
 1. 请在服务器新建工作目录，并将收到的saas放到工作目录，为了方便描述用$WORKSPACE表示工作目录：
 
 ```bash
